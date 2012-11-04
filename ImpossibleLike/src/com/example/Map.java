@@ -106,6 +106,7 @@ public class Map extends View implements View.OnTouchListener
         MuoviMondo();
         MuoviQuadrato();
 
+
         Collisione = CollisioneQuadrato(InizioLinea, FineLinea, YLinea);
         invalidate();
     }
