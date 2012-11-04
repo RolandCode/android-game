@@ -1,5 +1,3 @@
-// Prova editing
-
 package com.example;
 
 import android.content.Context;
@@ -14,23 +12,23 @@ public class Map extends View implements View.OnTouchListener
     public float X = 0;
     public float Y = 0;
 
-	public int Yline,
-               X1line,
-               X2line,
-               X3line,
-               X4line,
-               Pause,
-               MaxX,
-               MaxY;
+    public int Yline,
+            X1line,
+            X2line,
+            X3line,
+            X4line,
+            Pause,
+            MaxX,
+            MaxY;
 
     public int MuoviMondo = 10;
     public int MuoviQuadrato = 10;
 
-	public boolean Toccato = false;
+    public boolean Toccato = false;
 
-	public int XQ = 50;
-	public int YQ = 0;
-	public int LQ = 50;
+    public int XQ = 50;
+    public int YQ = 0;
+    public int LQ = 50;
     public boolean Collisione = false;
 
     public Paint Disegna = new Paint();
@@ -49,20 +47,20 @@ public class Map extends View implements View.OnTouchListener
                 X = p2.getX();
                 Y = p2.getY();
                 Toccato = true;
-			break;
+                break;
 
             case MotionEvent.ACTION_MOVE:
                 X = p2.getX();
                 Y = p2.getY();
-            break;
+                break;
 
             case MotionEvent.ACTION_UP:
                 Toccato = false;
-            break;
+                break;
         }
         invalidate();
         return true;
-	}
+    }
     void Inizializzazioni(){
         MaxX = Tavola.getWidth();
         MaxY = Tavola.getHeight();
@@ -78,8 +76,8 @@ public class Map extends View implements View.OnTouchListener
         }
     }
     public Map(Context Contesto){
-	    super(Contesto);
-	}
+        super(Contesto);
+    }
     boolean CollisioneQuadrato(int I, int F, int H){
         if(XQ > I - LQ && XQ < F && YQ >= H - LQ && YQ < H - LQ + 2){
             return true;
@@ -125,16 +123,16 @@ public class Map extends View implements View.OnTouchListener
     }
 
     void MuoviQuadrato(){
-       YQ = YQ + MuoviQuadrato;
+        YQ = YQ + MuoviQuadrato;
     }
 
     public void onDraw(Canvas C){
-	    Tavola = C; this.setOnTouchListener(this);
+        Tavola = C; this.setOnTouchListener(this);
 
         if(FlagInizializzazioni) Inizializzazioni(); FlagInizializzazioni = false;
 
-	    Disegna.setColor(Color.WHITE);
-	    Tavola.drawPaint(Disegna);
+        Disegna.setColor(Color.WHITE);
+        Tavola.drawPaint(Disegna);
 
         DisegnaQuadrato();
         DisegnaTesti();
@@ -149,13 +147,12 @@ public class Map extends View implements View.OnTouchListener
             Collisioni[i] = CollisioneQuadrato(CoordLines[i], CoordLines[i] + 500, Yline);
 
             if(Collisioni[i]){
-               Collisione=true;
+                Collisione=true;
             }
             else Collisione=false;
         }
 
         invalidate();
-   }
+    }
 
 }
-
