@@ -1,3 +1,5 @@
+// Modified
+
 package com.example;
 
 import android.content.Context;
@@ -105,7 +107,6 @@ public class GameClass extends View implements View.OnTouchListener
         DisegnaTesti();
         MuoviMondo();
         MuoviQuadrato();
-
 
         Collisione = CollisioneQuadrato(InizioLinea, FineLinea, YLinea);
         invalidate();
