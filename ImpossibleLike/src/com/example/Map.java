@@ -1,11 +1,14 @@
 package com.example;
 
+import java.lang.Math;
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.MotionEvent;
 import android.view.View;
+
 
 public class Map extends View implements View.OnTouchListener
 {
@@ -37,7 +40,38 @@ public class Map extends View implements View.OnTouchListener
     public int CoordLines[] = new int[Max];
     public boolean Collisioni[] = new boolean[Max];
 
-
+    public class Collisore {
+    	
+    	public boolean CollideCon(Collisore col) {
+    		return false;
+    	}
+    	
+    	protected int larghezza;
+    	protected int altezza;
+    	
+    	protected int x;
+    	protected int y;
+    	
+    }
+    
+    public class CollisoreRet extends Collisore {
+    	public boolean CollideCon(Collisore col) {
+    		if (col instanceof CollisoreRet) {
+    			CollisoreRet cr = (CollisoreRet)col;
+    			int absDistX = Math.abs(cr.x - x);
+    			int absDistY = Math.abs(cr.y - y);
+    			
+    			if( (absDistX >= (cr.larghezza + larghezza) / 2) &&
+    					(absDistY >= (cr.altezza + altezza) / 2) ) {
+    				return true;
+    			} else {
+        	        return false;
+    			}
+    		}
+    		return false;
+    	}
+    }
+    
 
     public boolean FlagInizializzazioni = true;
 
