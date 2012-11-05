@@ -15,6 +15,11 @@ public class GameClass extends View implements View.OnTouchListener
 
     public Sprite PallaGrande = new Sprite();
     public Sprite PallaPiccola = new Sprite();
+    public Sprite PareteDestra = new Sprite();
+    public Sprite PareteSinistra = new Sprite();
+
+    public int MovimentoPallaGrande = Sprite.RIGHT;
+    public int MovimentoPallaPiccola = Sprite.LEFT;
 
     Resources Risorse;
 
@@ -33,6 +38,7 @@ public class GameClass extends View implements View.OnTouchListener
     public long T = 0;
     public int DeltaT = 0;
     public double FrameRate = 0;
+    public float FrameDelay = 0;
 
     public boolean Toccato = false;
     public boolean Collisione = false;
@@ -60,7 +66,12 @@ public class GameClass extends View implements View.OnTouchListener
         YLinea = (int)(MaxY*0.8);
 
         PallaGrande.createSprite(Risorse, R.drawable.ball, 100, 100);
-        PallaPiccola.createSprite(50, 50, Color.RED);
+        PallaPiccola.createSprite(Risorse, R.drawable.ball, 50, 50);
+        PareteDestra.createSprite(5, MaxY);
+        PareteSinistra.createSprite(5, MaxY);
+        PareteDestra.setPosition(MaxX-5,0);
+
+        PareteSinistra.setPosition(0, 0);
         PallaPiccola.setPosition(MaxX, 50);
 
     }
@@ -108,13 +119,12 @@ public class GameClass extends View implements View.OnTouchListener
         if(!Collisione)YQuadrato = YQuadrato + MuoviQuadrato;
     }
 
-/////////////////////////////////////////////////////////////
-
     public void onDraw(Canvas C){
         DeltaT = (int)(System.currentTimeMillis()-T);
         T = System.currentTimeMillis();
         FrameRate = 1000/DeltaT;
-
+        if(DeltaT > 1000 || DeltaT < 0)DeltaT = 1;
+        FrameDelay = DeltaT/10f;
         Tavola = C; this.setOnTouchListener(this);
 
         if(FlagInizializzazioni) Inizializzazioni(); FlagInizializzazioni = false;
@@ -131,8 +141,20 @@ public class GameClass extends View implements View.OnTouchListener
 
         PallaGrande.draw(Tavola, Disegna);
         PallaPiccola.draw(Tavola, Disegna);
-        PallaGrande.MoveRight(10, 1);
-        PallaPiccola.MoveLeft(10, 1);
+        PareteDestra.draw(Tavola, Disegna);
+        PareteSinistra.draw(Tavola, Disegna);
+        PallaGrande.move(MovimentoPallaGrande, 1, FrameDelay);
+        PallaPiccola.move(MovimentoPallaPiccola, 1, FrameDelay);
+
+        if(PallaGrande.collide(PallaPiccola)){
+            MovimentoPallaGrande = Sprite.LEFT;
+        }
+        if(PallaPiccola.collide(PallaGrande)){
+            MovimentoPallaPiccola = Sprite.RIGHT;
+        }
+
+        if(PallaGrande.collide(PareteSinistra))MovimentoPallaGrande = Sprite.RIGHT;
+        if (PallaPiccola.collide(PareteDestra))MovimentoPallaPiccola = Sprite.LEFT;
 
         invalidate();
     }
