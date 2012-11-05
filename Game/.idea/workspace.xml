@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc0bc62f-4403-46d8-abea-926923c9d11e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk.res" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk.res" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk.unaligned" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk.unaligned" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/classes.dex" afterPath="$PROJECT_DIR$/out/production/Game/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/GameClass.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/GameClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R$layout.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R$string.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ImpossibleLike.iws" />
@@ -71,7 +63,7 @@
       <file leaf-file-name="GameClass.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/GameClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="19" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.8239796">
+            <state line="43" column="19" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.92022794">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -514,14 +506,18 @@
       <created>1352142597189</created>
       <updated>1352142597189</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Nuovi aggiornamenti:&#10;Aggiunti alcuni metodi alla classe Sprite e modificati altri...">
+      <created>1352142792342</created>
+      <updated>1352142792342</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49734244" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32933104" sideWeight="0.49734244" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -535,8 +531,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29460895" sideWeight="0.7409949" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25900516" sideWeight="0.49126804" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29460895" sideWeight="0.67066896" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25900516" sideWeight="0.49126804" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -686,7 +682,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/GameClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="19" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.8239796">
+        <state line="43" column="19" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.92022794">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
