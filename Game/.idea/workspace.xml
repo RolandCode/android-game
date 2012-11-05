@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc0bc62f-4403-46d8-abea-926923c9d11e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk.res" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk.res" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk.unaligned" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk.unaligned" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/classes.dex" afterPath="$PROJECT_DIR$/out/production/Game/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/GameClass.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/GameClass.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R$layout.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R$string.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/GameClass.java" afterPath="$PROJECT_DIR$/src/com/example/GameClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sprite.java" afterPath="$PROJECT_DIR$/src/com/example/Sprite.java" />
     </list>
     <ignored path="ImpossibleLike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +71,7 @@
       <file leaf-file-name="GameClass.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/GameClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="0" selection-start="3885" selection-end="3885" vertical-scroll-proportion="4.163265">
+            <state line="43" column="19" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.8239796">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -504,7 +510,11 @@
       <created>1352121570219</created>
       <updated>1352121570219</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Nuovi aggiornamenti:&#10;Aggiunti alcuni metodi alla classe Sprite e modificati altri...">
+      <created>1352142597189</created>
+      <updated>1352142597189</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -572,7 +582,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classe Sprite con alcuni metodi per gestire con facilità la creazione di oggetti (da rivedere);&#10;Inserita l'immagine di una palla;&#10;Inserito un esempio del funzionamento degli oggetti della classe Sprite e metodo collide();" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nuovi aggiornamenti:&#10;Aggiunti alcuni metodi alla classe Sprite e modificati altri..." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -589,6 +599,7 @@
     <MESSAGE value="Cambiato nome al progetto..." />
     <MESSAGE value="Modified" />
     <MESSAGE value="Classe Sprite con alcuni metodi per gestire con facilità la creazione di oggetti (da rivedere);&#10;Inserita l'immagine di una palla;&#10;Inserito un esempio del funzionamento degli oggetti della classe Sprite e metodo collide();" />
+    <MESSAGE value="Nuovi aggiornamenti:&#10;Aggiunti alcuni metodi alla classe Sprite e modificati altri..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -675,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/GameClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="0" selection-start="3885" selection-end="3885" vertical-scroll-proportion="4.163265">
+        <state line="43" column="19" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.8239796">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
