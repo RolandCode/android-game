@@ -1,8 +1,7 @@
-// Modified
-
 package com.example;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -13,6 +12,11 @@ public class GameClass extends View implements View.OnTouchListener
 {
     public float X = 0;
     public float Y = 0;
+
+    public Sprite PallaGrande = new Sprite();
+    public Sprite PallaPiccola = new Sprite();
+
+    Resources Risorse;
 
     public int         // --> void Inizializzazioni()
             InizioLinea,
@@ -26,6 +30,10 @@ public class GameClass extends View implements View.OnTouchListener
             MaxX,
             MaxY;
 
+    public long T = 0;
+    public int DeltaT = 0;
+    public double FrameRate = 0;
+
     public boolean Toccato = false;
     public boolean Collisione = false;
     public boolean FlagInizializzazioni = true;
@@ -35,6 +43,7 @@ public class GameClass extends View implements View.OnTouchListener
 
     public GameClass(Context Contesto){
         super(Contesto);
+        Risorse = getResources();
     }
 
     void Inizializzazioni(){
@@ -50,6 +59,9 @@ public class GameClass extends View implements View.OnTouchListener
         LatoQuadrato = 50;
         YLinea = (int)(MaxY*0.8);
 
+        PallaGrande.createSprite(Risorse, R.drawable.ball, 100, 100);
+        PallaPiccola.createSprite(50, 50, Color.RED);
+        PallaPiccola.setPosition(MaxX, 50);
 
     }
 
@@ -71,9 +83,13 @@ public class GameClass extends View implements View.OnTouchListener
         Disegna.setTextSize(20);
         Disegna.setTextAlign(Paint.Align.CENTER);
         Disegna.setColor(Color.BLACK);
-        Tavola.drawText("X: " + X, MaxX/2, MaxY/2 - 10, Disegna);
+        Tavola.drawText("X: " + X, MaxX / 2, MaxY / 2 - 10, Disegna);
         Tavola.drawText("Y: " + Y, MaxX / 2, MaxY / 2 + 10, Disegna);
-        Tavola.drawText("Collisione: " + Collisione, MaxX / 2, MaxY / 2 + 30, Disegna);
+        Tavola.drawText("Collision: " + Collisione, MaxX / 2, MaxY / 2 + 30, Disegna);
+        Tavola.drawText("Next frame delay: " + DeltaT/1000.0f + " s", MaxX / 2, MaxY / 2 - 30, Disegna);
+        Tavola.drawText("FPS ≈ " + (int)FrameRate +" f/s", MaxX / 2, MaxY / 2 - 50, Disegna);
+        Tavola.drawText("Collisione Palle: " + PallaGrande.collide(PallaPiccola), MaxX / 2, MaxY / 2 + 50, Disegna);
+        Tavola.drawText("Posizione X Palla1: " + PallaGrande.getPosition(Sprite.Y), MaxX / 2, MaxY / 2 + 70, Disegna);
     }
 
     void DisegnaQuadrato(){
@@ -81,7 +97,7 @@ public class GameClass extends View implements View.OnTouchListener
         Tavola.drawRect(XQuadrato - 2, YQuadrato - 2, XQuadrato + LatoQuadrato + 2, YQuadrato + LatoQuadrato + 2, Disegna);
         Disegna.setColor(Color.YELLOW);
         Tavola.drawRect(XQuadrato, YQuadrato, XQuadrato + LatoQuadrato, YQuadrato + LatoQuadrato, Disegna);
-    }
+     }
 
     void MuoviMondo(){
         InizioLinea = InizioLinea + MuoviMondo;
@@ -95,6 +111,10 @@ public class GameClass extends View implements View.OnTouchListener
 /////////////////////////////////////////////////////////////
 
     public void onDraw(Canvas C){
+        DeltaT = (int)(System.currentTimeMillis()-T);
+        T = System.currentTimeMillis();
+        FrameRate = 1000/DeltaT;
+
         Tavola = C; this.setOnTouchListener(this);
 
         if(FlagInizializzazioni) Inizializzazioni(); FlagInizializzazioni = false;
@@ -107,8 +127,13 @@ public class GameClass extends View implements View.OnTouchListener
         DisegnaTesti();
         MuoviMondo();
         MuoviQuadrato();
-
         Collisione = CollisioneQuadrato(InizioLinea, FineLinea, YLinea);
+
+        PallaGrande.draw(Tavola, Disegna);
+        PallaPiccola.draw(Tavola, Disegna);
+        PallaGrande.MoveRight(10, 1);
+        PallaPiccola.MoveLeft(10, 1);
+
         invalidate();
     }
 
