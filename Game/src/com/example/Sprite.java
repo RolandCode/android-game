@@ -4,19 +4,20 @@ import android.content.res.Resources;
 import android.graphics.*;
 
 public class Sprite {
+    public int[] plans4tomorrow = new int[1];
 
     public static int X             = 0;
     public static int Y             = 1;
 
-    public static int STOP          = 0;
-    public static int LEFT          = 1;
-    public static int RIGHT         = 2;
-    public static int TOP           = 3;
-    public static int BOTTOM        = 4;
-    public static int LEFT_BOTTOM   = 5;
-    public static int LEFT_TOP      = 6;
-    public static int RIGHT_BOTTOM  = 7;
-    public static int RIGHT_TOP     = 8;
+    public static final int STOP          = 0;
+    public static final int LEFT          = 1;
+    public static final int RIGHT         = 2;
+    public static final int TOP           = 3;
+    public static final int BOTTOM        = 4;
+    public static final int LEFT_BOTTOM   = 5;
+    public static final int LEFT_TOP      = 6;
+    public static final int RIGHT_BOTTOM  = 7;
+    public static final int RIGHT_TOP     = 8;
 
     private float Position[] = {0, 0};
     private Rect Sagoma = new Rect();
@@ -53,65 +54,68 @@ public class Sprite {
     private void moveBottom(float MoveCoefficient, float FrameDelay){
         Position[1] += MoveCoefficient * FrameDelay;
     }
-    public void move(int Type, float MoveCoefficient, float FrameDelay){
-        if(Type == Sprite.LEFT){
-            moveLeft(MoveCoefficient, FrameDelay);
+    public void move(final int Type, float MoveCoefficient, float FrameDelay){
+        switch(Type){
+            case LEFT:
+                moveLeft(MoveCoefficient, FrameDelay);
+                break;
+            case RIGHT:
+                moveRight(MoveCoefficient, FrameDelay);
+                break;
+            case TOP:
+                moveTop(MoveCoefficient, FrameDelay);
+                break;
+            case BOTTOM:
+                moveBottom(MoveCoefficient, FrameDelay);
+                break;
+            case LEFT_TOP:
+                moveLeft(MoveCoefficient, FrameDelay);
+                moveTop(MoveCoefficient, FrameDelay);
+                break;
+            case RIGHT_TOP:
+                moveRight(MoveCoefficient, FrameDelay);
+                moveTop(MoveCoefficient, FrameDelay);
+                break;
+            case LEFT_BOTTOM:
+                moveLeft(MoveCoefficient, FrameDelay);
+                moveBottom(MoveCoefficient, FrameDelay);
+                break;
+            case RIGHT_BOTTOM:
+                moveRight(MoveCoefficient, FrameDelay);
+                moveBottom(MoveCoefficient, FrameDelay);
+                break;
         }
-        if(Type == Sprite.RIGHT){
-            moveRight(MoveCoefficient, FrameDelay);
-        }
-        if(Type == Sprite.TOP){
-            moveTop(MoveCoefficient, FrameDelay);
-        }
-        if(Type == Sprite.BOTTOM){
-            moveBottom(MoveCoefficient, FrameDelay);
-        }
-        if(Type == Sprite.LEFT_TOP){
-            moveLeft(MoveCoefficient, FrameDelay);
-            moveTop(MoveCoefficient, FrameDelay);
-        }
-        if(Type == Sprite.RIGHT_TOP){
-            moveRight(MoveCoefficient, FrameDelay);
-            moveTop(MoveCoefficient, FrameDelay);
-        }
-        if(Type == Sprite.LEFT_BOTTOM){
-            moveLeft(MoveCoefficient, FrameDelay);
-            moveBottom(MoveCoefficient, FrameDelay);
-        }
-        if(Type == Sprite.RIGHT_BOTTOM){
-            moveRight(MoveCoefficient, FrameDelay);
-            moveBottom(MoveCoefficient, FrameDelay);
-        }
-
     }
-    public void move(int Type, float MoveCoefficient1, float MoveCoefficient2, float FrameDelay){
-        if(Type == Sprite.LEFT){
-            moveLeft(MoveCoefficient1, FrameDelay);
-        }
-        if(Type == Sprite.RIGHT){
-            moveRight(MoveCoefficient1, FrameDelay);
-        }
-        if(Type == Sprite.TOP){
-            moveTop(MoveCoefficient1, FrameDelay);
-        }
-        if(Type == Sprite.BOTTOM){
-            moveBottom(MoveCoefficient1, FrameDelay);
-        }
-        if(Type == Sprite.LEFT_TOP){
-            moveLeft(MoveCoefficient1, FrameDelay);
-            moveTop(MoveCoefficient2, FrameDelay);
-        }
-        if(Type == Sprite.RIGHT_TOP){
-            moveRight(MoveCoefficient1, FrameDelay);
-            moveTop(MoveCoefficient2, FrameDelay);
-        }
-        if(Type == Sprite.LEFT_BOTTOM){
-            moveLeft(MoveCoefficient1, FrameDelay);
-            moveBottom(MoveCoefficient2, FrameDelay);
-        }
-        if(Type == Sprite.RIGHT_BOTTOM){
-            moveRight(MoveCoefficient1, FrameDelay);
-            moveBottom(MoveCoefficient2, FrameDelay);
+    public void move(final int Type, float MoveCoefficient1, float MoveCoefficient2, float FrameDelay){
+        switch(Type){
+            case LEFT:
+                moveLeft(MoveCoefficient1, FrameDelay);
+                break;
+            case RIGHT:
+                moveRight(MoveCoefficient1, FrameDelay);
+                break;
+            case TOP:
+                moveTop(MoveCoefficient1, FrameDelay);
+                break;
+            case BOTTOM:
+                moveBottom(MoveCoefficient1, FrameDelay);
+                break;
+            case LEFT_TOP:
+                moveLeft(MoveCoefficient1, FrameDelay);
+                moveTop(MoveCoefficient2, FrameDelay);
+                break;
+            case RIGHT_TOP:
+                moveRight(MoveCoefficient1, FrameDelay);
+                moveTop(MoveCoefficient2, FrameDelay);
+                break;
+            case  LEFT_BOTTOM:
+                moveLeft(MoveCoefficient1, FrameDelay);
+                moveBottom(MoveCoefficient2, FrameDelay);
+                break;
+            case RIGHT_BOTTOM:
+                moveRight(MoveCoefficient1, FrameDelay);
+                moveBottom(MoveCoefficient2, FrameDelay);
+                break;
         }
     }
     public void move(int Type){

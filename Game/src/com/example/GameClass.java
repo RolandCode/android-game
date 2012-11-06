@@ -161,6 +161,7 @@ public class GameClass extends View implements View.OnTouchListener
 
     public boolean onTouch(View p1, MotionEvent p2){
         switch (p2.getAction()){
+
             case MotionEvent.ACTION_DOWN:
                 X = p2.getX();
                 Y = p2.getY();
