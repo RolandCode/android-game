@@ -4,10 +4,9 @@ import android.content.res.Resources;
 import android.graphics.*;
 
 public class Sprite {
-    public int[] plans4tomorrow = new int[1];
 
-    public static int X             = 0;
-    public static int Y             = 1;
+    public static int X = 0;
+    public static int Y = 1;
 
     public static final int STOP          = 0;
     public static final int LEFT          = 1;
@@ -29,6 +28,7 @@ public class Sprite {
     public void setPosition(float X, float Y){
         this.Position[0] = X;
         this.Position[1] = Y;
+        updateSagoma();
     }
     public float[] getPosition(){
         return this.Position;
@@ -84,7 +84,7 @@ public class Sprite {
                 moveRight(MoveCoefficient, FrameDelay);
                 moveBottom(MoveCoefficient, FrameDelay);
                 break;
-        }
+        } updateSagoma();
     }
     public void move(final int Type, float MoveCoefficient1, float MoveCoefficient2, float FrameDelay){
         switch(Type){
@@ -117,12 +117,14 @@ public class Sprite {
                 moveBottom(MoveCoefficient2, FrameDelay);
                 break;
         }
+        updateSagoma();
     }
     public void move(int Type){
             moveLeft(0, 0);
             moveRight(0, 0);
             moveTop(0, 0);
             moveBottom(0, 0);
+            updateSagoma();
     }
     private void updateSagoma(){
         Sagoma.left = (int)Position[0];
@@ -142,16 +144,17 @@ public class Sprite {
         Width = W; Height = H;
         Colore = C;
         Texture = null;
+        updateSagoma();
     }
     public void createSprite(int W, int H){
         Width = W; Height = H;
         Texture = null;
+        updateSagoma();
     }
     public void draw(Canvas C, Paint P){
        P.setColor(Colore);
        if(Texture==null)C.drawRect(Position[0], Position[1], Position[0]+Width, Position[1]+Height, P);
        else C.drawBitmap(Texture, Position[0], Position[1], P);
-       updateSagoma();
     }
     public boolean collide(Sprite Oggetto){
         return Sagoma.intersect(Oggetto.getSagoma());

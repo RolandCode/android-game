@@ -18,22 +18,14 @@ public class GameClass extends View implements View.OnTouchListener
     public Sprite PareteDestra = new Sprite();
     public Sprite PareteSinistra = new Sprite();
 
+    public GestioneMovimentiThread GestioneMovimenti = new GestioneMovimentiThread();
+
     public int MovimentoPallaGrande = Sprite.RIGHT;
     public int MovimentoPallaPiccola = Sprite.LEFT;
 
     Resources Risorse;
 
-    public int         // --> void Inizializzazioni()
-            InizioLinea,
-            FineLinea,
-            YLinea,
-            MuoviMondo,
-            MuoviQuadrato,
-            XQuadrato,
-            YQuadrato,
-            LatoQuadrato,
-            MaxX,
-            MaxY;
+    public int MaxX, MaxY;
 
     public long T = 0;
     public int DeltaT = 0;
@@ -56,15 +48,6 @@ public class GameClass extends View implements View.OnTouchListener
         MaxX = Tavola.getWidth();
         MaxY = Tavola.getHeight();
 
-        InizioLinea = MaxX;
-        FineLinea = 2000;
-        MuoviMondo = -10;
-        MuoviQuadrato = 10;
-        XQuadrato = 50;
-        YQuadrato = 50;
-        LatoQuadrato = 50;
-        YLinea = (int)(MaxY*0.8);
-
         PallaGrande.createSprite(Risorse, R.drawable.ball, 100, 100);
         PallaPiccola.createSprite(Risorse, R.drawable.ball, 50, 50);
         PareteDestra.createSprite(5, MaxY);
@@ -74,87 +57,40 @@ public class GameClass extends View implements View.OnTouchListener
         PareteSinistra.setPosition(0, 0);
         PallaPiccola.setPosition(MaxX, 50);
 
-    }
+        GestioneMovimenti.start();
 
-    boolean CollisioneQuadrato(int I, int F, int H){
-        if(
-           XQuadrato > (I - LatoQuadrato)  &&
-           XQuadrato < F                   &&
-           YQuadrato >= (H - LatoQuadrato) &&
-           YQuadrato < (H - LatoQuadrato + 2)
-        ){ return true; } return false;
     }
-
-    void DisegnaTerreno(){
-        Disegna.setColor(Color.BLACK);
-        Tavola.drawLine(InizioLinea, YLinea, FineLinea, YLinea, Disegna);
-    }
-
     void DisegnaTesti(){
         Disegna.setTextSize(20);
         Disegna.setTextAlign(Paint.Align.CENTER);
         Disegna.setColor(Color.BLACK);
         Tavola.drawText("X: " + X, MaxX / 2, MaxY / 2 - 10, Disegna);
         Tavola.drawText("Y: " + Y, MaxX / 2, MaxY / 2 + 10, Disegna);
-        Tavola.drawText("Collision: " + Collisione, MaxX / 2, MaxY / 2 + 30, Disegna);
         Tavola.drawText("Next frame delay: " + DeltaT/1000.0f + " s", MaxX / 2, MaxY / 2 - 30, Disegna);
         Tavola.drawText("FPS ≈ " + (int)FrameRate +" f/s", MaxX / 2, MaxY / 2 - 50, Disegna);
-        Tavola.drawText("Collisione Palle: " + PallaGrande.collide(PallaPiccola), MaxX / 2, MaxY / 2 + 50, Disegna);
-        Tavola.drawText("Posizione X Palla1: " + PallaGrande.getPosition(Sprite.Y), MaxX / 2, MaxY / 2 + 70, Disegna);
-    }
-
-    void DisegnaQuadrato(){
-        Disegna.setColor(Color.RED);
-        Tavola.drawRect(XQuadrato - 2, YQuadrato - 2, XQuadrato + LatoQuadrato + 2, YQuadrato + LatoQuadrato + 2, Disegna);
-        Disegna.setColor(Color.YELLOW);
-        Tavola.drawRect(XQuadrato, YQuadrato, XQuadrato + LatoQuadrato, YQuadrato + LatoQuadrato, Disegna);
-     }
-
-    void MuoviMondo(){
-        InizioLinea = InizioLinea + MuoviMondo;
-        FineLinea = FineLinea + MuoviMondo;
-    }
-
-    void MuoviQuadrato(){
-        if(!Collisione)YQuadrato = YQuadrato + MuoviQuadrato;
+        Tavola.drawText("Collisione Palle: " + PallaGrande.collide(PallaPiccola), MaxX / 2, MaxY / 2 + 30, Disegna);
     }
 
     public void onDraw(Canvas C){
+        Tavola = C; this.setOnTouchListener(this);
+
         DeltaT = (int)(System.currentTimeMillis()-T);
         T = System.currentTimeMillis();
+        if(DeltaT > 1000 || DeltaT <= 0)DeltaT = 1;
         FrameRate = 1000/DeltaT;
-        if(DeltaT > 1000 || DeltaT < 0)DeltaT = 1;
         FrameDelay = DeltaT/10f;
-        Tavola = C; this.setOnTouchListener(this);
 
         if(FlagInizializzazioni) Inizializzazioni(); FlagInizializzazioni = false;
 
         Disegna.setColor(Color.WHITE);
         Tavola.drawPaint(Disegna);
 
-        DisegnaQuadrato();
-        DisegnaTerreno();
-        DisegnaTesti();
-        MuoviMondo();
-        MuoviQuadrato();
-        Collisione = CollisioneQuadrato(InizioLinea, FineLinea, YLinea);
-
         PallaGrande.draw(Tavola, Disegna);
         PallaPiccola.draw(Tavola, Disegna);
         PareteDestra.draw(Tavola, Disegna);
         PareteSinistra.draw(Tavola, Disegna);
-        PallaGrande.move(MovimentoPallaGrande, 1, FrameDelay);
-        PallaPiccola.move(MovimentoPallaPiccola, 1, FrameDelay);
 
-        if(PallaGrande.collide(PallaPiccola)){
-            MovimentoPallaGrande = Sprite.LEFT;
-        }
-        if(PallaPiccola.collide(PallaGrande)){
-            MovimentoPallaPiccola = Sprite.RIGHT;
-        }
-
-        if(PallaGrande.collide(PareteSinistra))MovimentoPallaGrande = Sprite.RIGHT;
-        if (PallaPiccola.collide(PareteDestra))MovimentoPallaPiccola = Sprite.LEFT;
+        DisegnaTesti();
 
         invalidate();
     }
@@ -181,4 +117,20 @@ public class GameClass extends View implements View.OnTouchListener
         return true;
     }
 
+    class GestioneMovimentiThread extends Thread{
+        public void run(){
+            while(true){
+
+                if(PallaGrande.collide(PallaPiccola))MovimentoPallaGrande = Sprite.LEFT;
+                if(PallaGrande.collide(PareteSinistra))MovimentoPallaGrande = Sprite.RIGHT;
+
+                if(PallaPiccola.collide(PallaGrande))MovimentoPallaPiccola = Sprite.RIGHT;
+                if (PallaPiccola.collide(PareteDestra))MovimentoPallaPiccola = Sprite.LEFT;
+
+                PallaGrande.move(MovimentoPallaGrande, 0.01f, 1);
+                PallaPiccola.move(MovimentoPallaPiccola, 0.01f, 1);
+
+            }
+        }
+    }
 }

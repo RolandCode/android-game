@@ -62,32 +62,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameClass.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/GameClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="24" selection-start="5365" selection-end="5368" vertical-scroll-proportion="0.60714287">
-              <folding />
+            <state line="119" column="0" selection-start="3546" selection-end="3546" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#onTouch#0;class#GameClass#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MotionEvent.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Android SDK/android-sdk/platforms/android-8/android.jar!/android/view/MotionEvent.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="19" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sprite.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Sprite.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/Sprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="31" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.0">
+            <state line="133" column="6" selection-start="4546" selection-end="4546" vertical-scroll-proportion="0.41234568">
               <folding>
+                <element signature="method#setPosition#0;class#Sprite#0" expanded="false" />
+                <element signature="method#getPosition#0;class#Sprite#0" expanded="false" />
+                <element signature="method#getPosition#1;class#Sprite#0" expanded="false" />
+                <element signature="method#moveLeft#0;class#Sprite#0" expanded="false" />
+                <element signature="method#moveRight#0;class#Sprite#0" expanded="false" />
+                <element signature="method#moveTop#0;class#Sprite#0" expanded="false" />
                 <element signature="method#moveBottom#0;class#Sprite#0" expanded="false" />
                 <element signature="method#move#0;class#Sprite#0" expanded="false" />
+                <element signature="method#move#1;class#Sprite#0" expanded="false" />
                 <element signature="method#move#2;class#Sprite#0" expanded="false" />
+                <element signature="method#updateSagoma#0;class#Sprite#0" expanded="false" />
+                <element signature="method#getSagoma#0;class#Sprite#0" expanded="false" />
+                <element signature="method#createSprite#0;class#Sprite#0" expanded="false" />
+                <element signature="method#createSprite#1;class#Sprite#0" expanded="false" />
+                <element signature="method#createSprite#2;class#Sprite#0" expanded="false" />
+                <element signature="method#draw#0;class#Sprite#0" expanded="false" />
+                <element signature="method#collide#0;class#Sprite#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -166,6 +173,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -218,16 +235,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Game" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -509,11 +516,15 @@
       <created>1352143560258</created>
       <updated>1352143560258</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Nuovi aggiornamenti:&#10;Aggiunti alcuni metodi alla classe Sprite e modificati altri...">
+      <created>1352189523005</created>
+      <updated>1352189523005</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49734244" order="7" side_tool="false" content_ui="tabs" />
@@ -521,7 +532,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39965695" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49734244" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25900516" sideWeight="0.50645405" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17838766" sideWeight="0.49734244" order="7" side_tool="false" content_ui="tabs" />
@@ -531,7 +542,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29460895" sideWeight="0.7409949" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25900516" sideWeight="0.49126804" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25900516" sideWeight="0.48823082" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -656,26 +667,42 @@
     </entry>
     <entry file="jar://C:/Android SDK/android-sdk/platforms/android-8/android.jar!/android/view/MotionEvent.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+        <state line="5" column="19" selection-start="156" selection-end="156" vertical-scroll-proportion="0.04336735">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Sprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="31" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="method#moveBottom#0;class#Sprite#0" expanded="false" />
-            <element signature="method#move#0;class#Sprite#0" expanded="false" />
-            <element signature="method#move#2;class#Sprite#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/GameClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="24" selection-start="5365" selection-end="5368" vertical-scroll-proportion="0.60714287">
-          <folding />
+        <state line="119" column="0" selection-start="3546" selection-end="3546" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#onTouch#0;class#GameClass#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="6" selection-start="4546" selection-end="4546" vertical-scroll-proportion="0.41234568">
+          <folding>
+            <element signature="method#setPosition#0;class#Sprite#0" expanded="false" />
+            <element signature="method#getPosition#0;class#Sprite#0" expanded="false" />
+            <element signature="method#getPosition#1;class#Sprite#0" expanded="false" />
+            <element signature="method#moveLeft#0;class#Sprite#0" expanded="false" />
+            <element signature="method#moveRight#0;class#Sprite#0" expanded="false" />
+            <element signature="method#moveTop#0;class#Sprite#0" expanded="false" />
+            <element signature="method#moveBottom#0;class#Sprite#0" expanded="false" />
+            <element signature="method#move#0;class#Sprite#0" expanded="false" />
+            <element signature="method#move#1;class#Sprite#0" expanded="false" />
+            <element signature="method#move#2;class#Sprite#0" expanded="false" />
+            <element signature="method#updateSagoma#0;class#Sprite#0" expanded="false" />
+            <element signature="method#getSagoma#0;class#Sprite#0" expanded="false" />
+            <element signature="method#createSprite#0;class#Sprite#0" expanded="false" />
+            <element signature="method#createSprite#1;class#Sprite#0" expanded="false" />
+            <element signature="method#createSprite#2;class#Sprite#0" expanded="false" />
+            <element signature="method#draw#0;class#Sprite#0" expanded="false" />
+            <element signature="method#collide#0;class#Sprite#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
