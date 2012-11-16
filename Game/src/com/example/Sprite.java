@@ -22,7 +22,6 @@ public class Sprite {
     public static final int HORIZONTAL_COLLISION  = 0;
     public static final int VERTICAL_COLLISION    = 1;
 
-
     private int TypeOfCollision = HORIZONTAL_COLLISION;
 
     private int CurrentDirection = STOP;
@@ -30,10 +29,11 @@ public class Sprite {
     private float MoveCoefficientVertical = 0;
 
     private float Position[] = {0, 0};
-    private Rect Sagoma = new Rect();
+    private Rect Shape = new Rect();
     private int Width = 0;
     private int Height = 0;
     private Bitmap Texture;
+    private Bitmap TextureCopia;
     private int Colore = Color.WHITE;
 
     public void setCurrentDirection(int CurrentDirection){
@@ -45,7 +45,6 @@ public class Sprite {
     public void setMoveCoefficientVertical(float MoveCoefficientVertical){
         this.MoveCoefficientVertical = MoveCoefficientVertical;
     }
-
     public int getCurrentDirection(){
         return this.CurrentDirection;
     }
@@ -55,7 +54,6 @@ public class Sprite {
     public float getMoveCoefficientVertical(){
         return this.MoveCoefficientVertical;
     }
-
     public void reverseDirection(){
         switch (TypeOfCollision){
             case HORIZONTAL_COLLISION:
@@ -123,11 +121,10 @@ public class Sprite {
                 break;
         }
     }
-
     public void setPosition(float X, float Y){
         this.Position[0] = X;
         this.Position[1] = Y;
-        updateSagoma();
+        updateShape();
     }
     public float[] getPosition(){
         return this.Position;
@@ -189,40 +186,52 @@ public class Sprite {
                 moveLeft(0, 0);
                 moveRight(0, 0);
                 break;
-        } updateSagoma();
+        } updateShape();
     }
-    private void updateSagoma(){
-        Sagoma.left = (int)Position[0];
-        Sagoma.top = (int)Position[1];
-        Sagoma.bottom = (int)Position[1] + Height;
-        Sagoma.right = (int)Position[0] + Width;
+    public int getWidth(){
+        return this.Width;
     }
-    private Rect getSagoma(){
-        return Sagoma;
+    public int getHeight(){
+        return this.Height;
+    }
+    private void updateShape(){
+        Shape.left = (int)Position[0];
+        Shape.top = (int)Position[1];
+        Shape.bottom = (int)Position[1] + Height;
+        Shape.right = (int)Position[0] + Width;
+    }
+    public Rect getShape(){
+        return Shape;
     }
     public void createSprite(Resources R, int Foto, int W, int H){
         Width = W; Height = H;
         Texture = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(R, Foto), Width, Height, true);
-        updateSagoma();
+        TextureCopia = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(R, Foto), Width, Height, true);
+        updateShape();
     }
     public void createSprite(int W, int H, int C){
         Width = W; Height = H;
         Colore = C;
-        Texture = null;
-        updateSagoma();
+        Texture = null; TextureCopia=null;
+        updateShape();
     }
     public void createSprite(int W, int H){
         Width = W; Height = H;
-        Texture = null;
-        updateSagoma();
+        Texture = null; TextureCopia = null;
+        updateShape();
     }
     public void draw(Canvas C, Paint P){
         P.setColor(Colore);
         if(Texture==null)C.drawRect(Position[0], Position[1], Position[0]+Width, Position[1]+Height, P);
         else C.drawBitmap(Texture, Position[0], Position[1], P);
     }
-    public boolean collide(Sprite Oggetto, int TypeOfCollision){
-        this.TypeOfCollision = TypeOfCollision;
-        return Sagoma.intersect(Oggetto.getSagoma());
+
+    public boolean collide(Sprite Oggetto, int type){
+        if(Oggetto.cloneBitmap()==null)return this.getShape().intersect(Oggetto.getShape());
+        else return UtilCollisioni.getCollision(type, this, Oggetto);
     }
+    public Bitmap cloneBitmap() {
+        return TextureCopia;
+    }
+
 }
