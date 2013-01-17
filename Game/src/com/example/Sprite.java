@@ -41,12 +41,12 @@ public class Sprite {
 
     public Sprite(boolean fixed) {
         if(!fixed) {
-            Acceleration.y = 1;
+            Acceleration.setY(1);
         }
     }
 
     public Sprite() {
-        Acceleration.y = 1;
+        Acceleration.setY(1);
     }
 
     public void setCurrentDirection(int CurrentDirection){
@@ -135,14 +135,14 @@ public class Sprite {
         }
     }
     public void setPosition(int X, int Y){
-        this.Position.x = X;
-        this.Position.y = Y;
+        this.Position.setX(X);
+        this.Position.setY(Y);
         updateShape();
     }
     public Vettore getPosition(){
         return this.Position;
     }
-    //    private void moveLeft(float MoveCoefficient, float FrameDelay){
+//    private void moveLeft(float MoveCoefficient, float FrameDelay){
 //        Position[0] -= MoveCoefficient * FrameDelay;
 //    }
 //    private void moveRight(float MoveCoefficient, float FrameDelay){
@@ -190,7 +190,7 @@ public class Sprite {
 //                moveLeft(0, 0);
 //                moveRight(0, 0);
 //                break;
-//        } 
+//        }    }
         Speed = Speed.add(Acceleration.mul(FrameDelay));
 //    	Speed = new Vettore(-1,-1);
         Position = Position.add(Speed.mul(FrameDelay));
@@ -203,10 +203,10 @@ public class Sprite {
         return this.Height;
     }
     private void updateShape(){
-        Shape.left = Position.x;
-        Shape.top = Position.y;
-        Shape.bottom = Position.y + Height;
-        Shape.right = Position.x + Width;
+        Shape.left = (int)Position.getX();
+        Shape.top = (int)Position.getY();
+        Shape.bottom = (int)Position.getY() + Height;
+        Shape.right = (int)Position.getX() + Width;
     }
     public Rect getShape(){
         return Shape;
@@ -231,8 +231,8 @@ public class Sprite {
     public void draw(Canvas C, Paint P){
         P.setColor(Colore);
 //        move(1);
-        if(Texture==null)C.drawRect(Position.x, Position.y, Position.x+Width, Position.y+Height, P);
-        else C.drawBitmap(Texture, Position.x, Position.y, P);
+        if(Texture==null)C.drawRect(Position.getX(), Position.getY(), Position.getX()+Width, Position.getY()+Height, P);
+        else C.drawBitmap(Texture, Position.getX(), Position.getY(), P);
     }
 
     public boolean collide(Sprite Oggetto, int type){
@@ -244,17 +244,15 @@ public class Sprite {
     }
     public void onCollision(Sprite other) {
 //    	Vettore opposite = (Position.sub(other.Position));
-        Acceleration.x = 0;
-        Acceleration.y = -1;
+        Acceleration.setX(0);
+        Acceleration.setY(-1);
 //    	Speed = Speed.add(opposite.mul(-1));
 //    	Speed.y -= 1;  
 //    	Position.y = 40;
     }
-
     public Vettore getSpeed() {
         return Speed;
     }
-
     public Vettore getAcceleration() {
         return Acceleration;
     }
