@@ -8,6 +8,8 @@ import android.graphics.Paint;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.util.ArrayList;
+
 public class GameClass extends View implements View.OnTouchListener
 {
     public float X = 0;
@@ -19,10 +21,10 @@ public class GameClass extends View implements View.OnTouchListener
     public Sprite PallaGrande = new Sprite();
     public Sprite PallaPiccola = new Sprite();
 
-    public Sprite PareteDestra = new Sprite();
-    public Sprite PareteSinistra = new Sprite();
-    public Sprite PareteSopra = new Sprite();
-    public Sprite PareteSotto = new Sprite();
+    public Sprite PareteDestra = new Sprite(true);
+    public Sprite PareteSinistra = new Sprite(true);
+    public Sprite PareteSopra = new Sprite(true);
+    public Sprite PareteSotto = new Sprite(true);
 
     Resources Risorse;
 
@@ -44,6 +46,8 @@ public class GameClass extends View implements View.OnTouchListener
 
     public boolean Collisione = false;
 
+    public ArrayList<Sprite> Colliders = new ArrayList<Sprite>();
+
     public GameClass(Context Contesto){
         super(Contesto);
         Risorse = getResources();
@@ -54,13 +58,13 @@ public class GameClass extends View implements View.OnTouchListener
         MaxY = Tavola.getHeight();
 
         PallaGrande.createSprite(Risorse, R.drawable.img, 300, 300);
-        PallaGrande.setPosition(250, 250);
+        PallaGrande.setPosition(MaxX/2, MaxY/2);
         PallaGrande.setCurrentDirection(Sprite.RIGHT_BOTTOM);
         PallaGrande.setMoveCoefficientHorizontal(0f);
         PallaGrande.setMoveCoefficientVertical(0f);
 
         PallaPiccola.createSprite(Risorse, R.drawable.ball, 150, 150);
-        PallaPiccola.setPosition(MaxX-200, 200);
+        PallaPiccola.setPosition(MaxX/2, MaxY/2);
         PallaPiccola.setCurrentDirection(Sprite.LEFT_BOTTOM);
         PallaPiccola.setMoveCoefficientHorizontal(0f);
         PallaPiccola.setMoveCoefficientVertical(0f);
@@ -77,6 +81,11 @@ public class GameClass extends View implements View.OnTouchListener
         PareteSotto.createSprite(MaxX, 5);
         PareteSotto.setPosition(0, MaxY-5);
 
+        Colliders.add(PareteDestra);
+        Colliders.add(PareteSinistra);
+        Colliders.add(PareteSopra);
+        Colliders.add(PareteSotto);
+
         GestioneMovimenti.start();
         GestioneCollisioni.start();
 
@@ -89,6 +98,7 @@ public class GameClass extends View implements View.OnTouchListener
         Tavola.drawText("Delay Movimenti: " + DelayMovimenti + " ms", MaxX / 2, 60, Disegna);
         Tavola.drawText("Delay Collisioni: " + DelayCollisioni + " ms", MaxX / 2, 80, Disegna);
         Tavola.drawText("PallaGrande -> PallaPiccola: " + Collisione, MaxX / 2, 110, Disegna);
+        Tavola.drawText("PallaGrande speed, acceleration" + PallaGrande.getSpeed().toString() + " , " + PallaGrande.getAcceleration().toString(), MaxX / 2, 140, Disegna);
     }
 
     public void onDraw(Canvas C){
@@ -145,9 +155,21 @@ public class GameClass extends View implements View.OnTouchListener
                 DelayMovimenti = (System.currentTimeMillis() - NowMovimenti);
                 NowMovimenti = System.currentTimeMillis();
 
-                PallaPiccola.setPosition(X-PallaPiccola.getWidth()/2, Y-PallaPiccola.getHeight()/2);
-                PallaGrande.setPosition(MaxX/2-PallaGrande.getWidth()/2, MaxY/2-PallaGrande.getHeight()/2);
+//                PallaPiccola.setPosition((int)(X-PallaPiccola.getWidth()/2), (int)(Y-PallaPiccola.getHeight()/2));
+//                PallaGrande.setPosition(MaxX/2-PallaGrande.getWidth()/2, MaxY/2-PallaGrande.getHeight()/2);
 
+                try {
+                    sleep(100);
+                } catch (InterruptedException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+
+
+                for(Sprite collider : Colliders) {
+                    if(PallaGrande.collide(collider, UtilCollisioni.PERFECT_PIXEL)) PallaGrande.onCollision(collider);
+                    if(PallaPiccola.collide(collider, UtilCollisioni.PERFECT_PIXEL)) PallaPiccola.onCollision(collider);
+                }
                 PallaGrande.move(1);
                 PallaPiccola.move(1);
 
@@ -163,14 +185,15 @@ public class GameClass extends View implements View.OnTouchListener
 
                 Collisione = PallaGrande.collide(PallaPiccola, UtilCollisioni.PERFECT_PIXEL);
 
-                if(PallaGrande.collide(PareteSinistra, UtilCollisioni.PERFECT_PIXEL))PallaGrande.reverseDirection();
-                if(PallaGrande.collide(PareteDestra, UtilCollisioni.PERFECT_PIXEL))PallaGrande.reverseDirection();
-                if(PallaGrande.collide(PareteSopra, UtilCollisioni.PERFECT_PIXEL))PallaGrande.reverseDirection();
-                if(PallaGrande.collide(PareteSotto, UtilCollisioni.PERFECT_PIXEL))PallaGrande.reverseDirection();
-                if(PallaPiccola.collide(PareteSinistra, UtilCollisioni.PERFECT_PIXEL))PallaPiccola.reverseDirection();
-                if(PallaPiccola.collide(PareteDestra, UtilCollisioni.PERFECT_PIXEL))PallaPiccola.reverseDirection();
-                if(PallaPiccola.collide(PareteSopra, UtilCollisioni.PERFECT_PIXEL))PallaPiccola.reverseDirection();
-                if(PallaPiccola.collide(PareteSotto, UtilCollisioni.PERFECT_PIXEL))PallaPiccola.reverseDirection();
+
+//                if(PallaGrande.collide(PareteSinistra, UtilCollisioni.PERFECT_PIXEL))PallaGrande.reverseDirection();
+//                if(PallaGrande.collide(PareteDestra, UtilCollisioni.PERFECT_PIXEL))PallaGrande.reverseDirection();
+//                if(PallaGrande.collide(PareteSopra, UtilCollisioni.PERFECT_PIXEL))PallaGrande.reverseDirection();
+//                if(PallaGrande.collide(PareteSotto, UtilCollisioni.PERFECT_PIXEL))PallaGrande.reverseDirection();
+//                if(PallaPiccola.collide(PareteSinistra, UtilCollisioni.PERFECT_PIXEL))PallaPiccola.reverseDirection();
+//                if(PallaPiccola.collide(PareteDestra, UtilCollisioni.PERFECT_PIXEL))PallaPiccola.reverseDirection();
+//                if(PallaPiccola.collide(PareteSopra, UtilCollisioni.PERFECT_PIXEL))PallaPiccola.reverseDirection();
+//                if(PallaPiccola.collide(PareteSotto, UtilCollisioni.PERFECT_PIXEL))PallaPiccola.reverseDirection();
             }
         }
     }

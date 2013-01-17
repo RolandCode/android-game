@@ -1,5 +1,6 @@
 package com.example;
 
+
 import android.content.res.Resources;
 import android.graphics.*;
 
@@ -28,13 +29,25 @@ public class Sprite {
     private float MoveCoefficientHorizontal = 0;
     private float MoveCoefficientVertical = 0;
 
-    private float Position[] = {0, 0};
+    private Vettore Position = new Vettore();
+    private Vettore Speed = new Vettore();
+    private Vettore Acceleration = new Vettore();
     private Rect Shape = new Rect();
     private int Width = 0;
     private int Height = 0;
     private Bitmap Texture;
     private Bitmap TextureCopia;
     private int Colore = Color.WHITE;
+
+    public Sprite(boolean fixed) {
+        if(!fixed) {
+            Acceleration.y = 1;
+        }
+    }
+
+    public Sprite() {
+        Acceleration.y = 1;
+    }
 
     public void setCurrentDirection(int CurrentDirection){
         this.CurrentDirection = CurrentDirection;
@@ -121,72 +134,67 @@ public class Sprite {
                 break;
         }
     }
-    public void setPosition(float X, float Y){
-        this.Position[0] = X;
-        this.Position[1] = Y;
+    public void setPosition(int X, int Y){
+        this.Position.x = X;
+        this.Position.y = Y;
         updateShape();
     }
-    public float[] getPosition(){
+    public Vettore getPosition(){
         return this.Position;
     }
-    public float getPosition(int XorY){
-        if(XorY == 0){
-            return this.Position[0];
-        }
-        else if(XorY == 1){
-            return this.Position[1];
-        }
-        return 0;
-    }
-    private void moveLeft(float MoveCoefficient, float FrameDelay){
-        Position[0] -= MoveCoefficient * FrameDelay;
-    }
-    private void moveRight(float MoveCoefficient, float FrameDelay){
-        Position[0] += MoveCoefficient * FrameDelay;
-    }
-    private void moveTop(float MoveCoefficient, float FrameDelay){
-        Position[1] -= MoveCoefficient * FrameDelay;
-    }
-    private void moveBottom(float MoveCoefficient, float FrameDelay){
-        Position[1] += MoveCoefficient * FrameDelay;
-    }
+    //    private void moveLeft(float MoveCoefficient, float FrameDelay){
+//        Position[0] -= MoveCoefficient * FrameDelay;
+//    }
+//    private void moveRight(float MoveCoefficient, float FrameDelay){
+//        Position[0] += MoveCoefficient * FrameDelay;
+//    }
+//    private void moveTop(float MoveCoefficient, float FrameDelay){
+//        Position[1] -= MoveCoefficient * FrameDelay;
+//    }
+//    private void moveBottom(float MoveCoefficient, float FrameDelay){
+//        Position[1] += MoveCoefficient * FrameDelay;
+//    }
     public void move(float FrameDelay){
-        switch(CurrentDirection){
-            case LEFT:
-                moveLeft(this.getMoveCoefficientHorizontal(), FrameDelay);
-                break;
-            case RIGHT:
-                moveRight(this.getMoveCoefficientHorizontal(), FrameDelay);
-                break;
-            case TOP:
-                moveTop(this.getMoveCoefficientVertical(), FrameDelay);
-                break;
-            case BOTTOM:
-                moveBottom(this.getMoveCoefficientVertical(), FrameDelay);
-                break;
-            case LEFT_TOP:
-                moveLeft(this.getMoveCoefficientHorizontal(), FrameDelay);
-                moveTop(this.getMoveCoefficientVertical(), FrameDelay);
-                break;
-            case RIGHT_TOP:
-                moveRight(this.getMoveCoefficientHorizontal(), FrameDelay);
-                moveTop(this.getMoveCoefficientVertical(), FrameDelay);
-                break;
-            case LEFT_BOTTOM:
-                moveLeft(this.getMoveCoefficientHorizontal(), FrameDelay);
-                moveBottom(this.getMoveCoefficientVertical(), FrameDelay);
-                break;
-            case RIGHT_BOTTOM:
-                moveRight(this.getMoveCoefficientHorizontal(), FrameDelay);
-                moveBottom(this.getMoveCoefficientVertical(), FrameDelay);
-                break;
-            case STOP:
-                moveBottom(0, 0);
-                moveTop(0, 0);
-                moveLeft(0, 0);
-                moveRight(0, 0);
-                break;
-        } updateShape();
+//        switch(CurrentDirection){
+//            case LEFT:
+//                moveLeft(this.getMoveCoefficientHorizontal(), FrameDelay);
+//                break;
+//            case RIGHT:
+//                moveRight(this.getMoveCoefficientHorizontal(), FrameDelay);
+//                break;
+//            case TOP:
+//                moveTop(this.getMoveCoefficientVertical(), FrameDelay);
+//                break;
+//            case BOTTOM:
+//                moveBottom(this.getMoveCoefficientVertical(), FrameDelay);
+//                break;
+//            case LEFT_TOP:
+//                moveLeft(this.getMoveCoefficientHorizontal(), FrameDelay);
+//                moveTop(this.getMoveCoefficientVertical(), FrameDelay);
+//                break;
+//            case RIGHT_TOP:
+//                moveRight(this.getMoveCoefficientHorizontal(), FrameDelay);
+//                moveTop(this.getMoveCoefficientVertical(), FrameDelay);
+//                break;
+//            case LEFT_BOTTOM:
+//                moveLeft(this.getMoveCoefficientHorizontal(), FrameDelay);
+//                moveBottom(this.getMoveCoefficientVertical(), FrameDelay);
+//                break;
+//            case RIGHT_BOTTOM:
+//                moveRight(this.getMoveCoefficientHorizontal(), FrameDelay);
+//                moveBottom(this.getMoveCoefficientVertical(), FrameDelay);
+//                break;
+//            case STOP:
+//                moveBottom(0, 0);
+//                moveTop(0, 0);
+//                moveLeft(0, 0);
+//                moveRight(0, 0);
+//                break;
+//        } 
+        Speed = Speed.add(Acceleration.mul(FrameDelay));
+//    	Speed = new Vettore(-1,-1);
+        Position = Position.add(Speed.mul(FrameDelay));
+        updateShape();
     }
     public int getWidth(){
         return this.Width;
@@ -195,10 +203,10 @@ public class Sprite {
         return this.Height;
     }
     private void updateShape(){
-        Shape.left = (int)Position[0];
-        Shape.top = (int)Position[1];
-        Shape.bottom = (int)Position[1] + Height;
-        Shape.right = (int)Position[0] + Width;
+        Shape.left = Position.x;
+        Shape.top = Position.y;
+        Shape.bottom = Position.y + Height;
+        Shape.right = Position.x + Width;
     }
     public Rect getShape(){
         return Shape;
@@ -222,8 +230,9 @@ public class Sprite {
     }
     public void draw(Canvas C, Paint P){
         P.setColor(Colore);
-        if(Texture==null)C.drawRect(Position[0], Position[1], Position[0]+Width, Position[1]+Height, P);
-        else C.drawBitmap(Texture, Position[0], Position[1], P);
+//        move(1);
+        if(Texture==null)C.drawRect(Position.x, Position.y, Position.x+Width, Position.y+Height, P);
+        else C.drawBitmap(Texture, Position.x, Position.y, P);
     }
 
     public boolean collide(Sprite Oggetto, int type){
@@ -232,6 +241,22 @@ public class Sprite {
     }
     public Bitmap cloneBitmap() {
         return TextureCopia;
+    }
+    public void onCollision(Sprite other) {
+//    	Vettore opposite = (Position.sub(other.Position));
+        Acceleration.x = 0;
+        Acceleration.y = -1;
+//    	Speed = Speed.add(opposite.mul(-1));
+//    	Speed.y -= 1;  
+//    	Position.y = 40;
+    }
+
+    public Vettore getSpeed() {
+        return Speed;
+    }
+
+    public Vettore getAcceleration() {
+        return Acceleration;
     }
 
 }

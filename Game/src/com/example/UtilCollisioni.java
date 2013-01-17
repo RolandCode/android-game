@@ -21,8 +21,8 @@ public class UtilCollisioni {
 
     private static boolean collisionCircleCircle(Sprite SpriteA, Sprite SpriteB){
 
-        float DistanzaX = Math.abs(SpriteA.getPosition()[0] - SpriteB.getPosition()[0] + SpriteA.getWidth()/2 - SpriteB.getWidth()/2);
-        float DistanzaY = Math.abs(SpriteA.getPosition()[1] - SpriteB.getPosition()[1] + SpriteA.getHeight()/2 - SpriteB.getHeight()/2);
+        float DistanzaX = Math.abs(SpriteA.getPosition().x - SpriteB.getPosition().x + SpriteA.getWidth()/2 - SpriteB.getWidth()/2);
+        float DistanzaY = Math.abs(SpriteA.getPosition().y - SpriteB.getPosition().y + SpriteA.getHeight()/2 - SpriteB.getHeight()/2);
 
         return Math.sqrt(Math.pow(DistanzaX, 2)+ Math.pow(DistanzaY, 2)) <= SpriteA.getWidth()/2 + SpriteB.getWidth()/2;
     }
@@ -43,7 +43,7 @@ public class UtilCollisioni {
     }
 
     private static int TrovaPixel(Sprite Oggetto, int X, int Y) {
-        return Oggetto.cloneBitmap().getPixel(X - (int)Oggetto.getPosition()[0], Y - (int)Oggetto.getPosition()[1]);
+        return Oggetto.cloneBitmap().getPixel(X - (int)Oggetto.getPosition().x, Y - (int)Oggetto.getPosition().y);
     }
 
     public static Rect getRectIntersezione(Rect A, Rect B) {
