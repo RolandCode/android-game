@@ -6,7 +6,7 @@ import android.graphics.*;
 import android.view.*;
 import java.util.*;
 
-public class newGameClass extends View implements View.OnTouchListener{
+public class Elastic extends View implements View.OnTouchListener{
 
     public float[] eventsInformation = {0, 0, 10};
 
@@ -14,14 +14,12 @@ public class newGameClass extends View implements View.OnTouchListener{
 
     boolean flagInit = true;
 
-    public newGameClass(Context context){
-        super(context);
-    }
+    public Elastic(Context context){ super(context); }
 
     void init(){
         if(flagInit){
-            for (int i = 0; i < 6; i++){
-                objects.add(new Circle(240, 100+i*100, 40));
+            for (int i = 0; i < 4; i++){
+                objects.add(new Circle(40));
             }
         } flagInit = false;
     }
@@ -33,17 +31,15 @@ public class newGameClass extends View implements View.OnTouchListener{
         invalidate();
         return true;
     }
-
     void updateObjects(){
         for (int i = 0; i < objects.size(); i++){
-            if(!objects.get(i).isAlive()){
-                for (Circle Child: objects.get(i).getChildrens()){
+            if(!objects.get(i).alive){
+                for (Circle Child: objects.get(i).childrens){
                     objects.add(Child);
                 } objects.remove(i);
             }
         }
     }
-
     void drawObjects(Canvas canvas){
         for(Circle Object: objects){
             Object.draw(canvas, objects, eventsInformation);
