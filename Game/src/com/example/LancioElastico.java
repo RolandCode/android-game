@@ -1,45 +1,43 @@
 package com.example;
 
 public class LancioElastico {
-    private Vettore carica = new Vettore();
+    public Vettore carica = new Vettore();
 	private boolean charging = false;
 	private Circle parent;
+    private float x, y = 0;
 	
 	public LancioElastico(Circle parent){
 		this.parent = parent;
 	}
 	
 	private void rileva(float x, float y){
-     	    this.carica.setX(-(x - this.parent.getX())/10);
-    	    this.carica.setY(-(y - this.parent.getY())/10);
+     	    this.carica.x = -(x - this.x)/10;
+    	    this.carica.y = -(y - this.y)/10;
 	}
 	
 	private void erase(){
 		this.carica = new Vettore();
 	}
-	
-	public Vettore getCarica(){
-		return this.carica;
-	}
-	
-	public Vettore getDrawable(int type){
-		if (type == 0) return new Vettore(-this.carica.getX(), -this.carica.getY(), 0);
-		else return new Vettore(this.carica.getX()*10000, this.carica.getY()*10000, 0);
-	}
-	
+
 	public void sayPressed(){
 		this.charging = true;
+        this.x = parent.position.x;
+        this.y = parent.position.y;
+        parent.speed.setModule(0);
 	}
 
 	public void sayCharging(float x, float y){
 		this.rileva(x, y);
-	}
+        parent.position.x = x;
+        parent.position.y = y;
+    }
 
 	public void sayRelased(){
-		this.parent.speed = this.getCarica();
+		this.parent.speed = this.carica;
 		this.charging = false;
-		this.erase();		
+        this.erase();
 	}
+
 	public boolean isCharging(){
 		return this.charging;
 	}

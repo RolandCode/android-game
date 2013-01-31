@@ -6,87 +6,52 @@ import android.graphics.Paint;
 
 public final class Vettore {
 
-//    public int x;
-//    public int y;
+    public float x;
+    public float y;
 
     public static final int X_Y = 0;
     public static final int MOD_ARG = 1;
 
-    private float x, y, module, arg;
     private Paint paint = new Paint();
 
 
-/*    public Vettore() {
+    public Vettore() {
         this.x = 0;
         this.y = 0;
     }
 
-    public Vettore(int x, int y) {
+    public Vettore(float x, float y) {
         this.x = x;
         this.y = y;
     }
-*/
 
-
-    public Vettore(){
-        this.update(0, 0, 0);
-    }
-
-    public Vettore(float f, float s, int type){
-        this.update(f, s, type);
-    }
-
-    public void setX(float x){
-        this.update(x, this.y, X_Y);
-    }
-
-    public void setY(float y){
-        this.update(this.x, y, X_Y);
+    public Vettore(float module, float arg, boolean modarg){
+        this.update(module, arg, true);
     }
 
     public void setModule(float module){
-        this.update(module, (float)Math.toDegrees(this.arg), MOD_ARG);
+        this.update(module, (float)Math.toDegrees(this.getArg()), true);
     }
 
     public void setArg(float argG){
-        this.update(this.module, argG, MOD_ARG);
-    }
-
-    public float getX(){
-        return this.x;
-    }
-
-    public float getY(){
-        return this.y;
+        this.update(this.getModule(), argG, true);
     }
 
     public float getModule(){
-        return this.module;
+        return (float)Math.hypot(this.x, this.y);
     }
 
     public float getArg(){
-        return this.arg;
+        return (float)Math.atan2(this.y, this.x);
     }
 
     public float getArgG(){
-        return (float)Math.toDegrees(this.arg);
+        return (float)Math.toDegrees(Math.atan2(this.y, this.x));
     }
 
-    private void update(float f, float s, int type){
-
-        if (type == X_Y){
-            this.x = f;
-            this.y = s;
-            this.module = (float)Math.sqrt(this.x*this.x+this.y*this.y);
-            this.arg = (float)Math.atan2(this.y, this.x);
-        }
-
-        if (type == MOD_ARG){
-            this.module = f;
-            this.arg = (float)Math.toRadians(s);
-            this.x = (float)(this.module*Math.cos(this.arg));
-            this.y = (float)(this.module*Math.sin(this.arg));
-        }
+    private void update(float module, float arg, boolean modarg){
+            this.x = (float)(module*Math.cos(Math.toRadians(arg)));
+            this.y = (float)(module*Math.sin(Math.toRadians(arg)));
     }
 
     public Vettore(Vettore altro) {
@@ -163,10 +128,10 @@ public final class Vettore {
 
     public void draw(Canvas canvas, Circle circle, int c){
         this.paint.setColor(c);
-        float xi = circle.getX();
-        float yi = circle.getY();
-        float xf = xi + this.getX()*10;
-        float yf = yi + this.getY()*10;
+        float xi = circle.position.x;
+        float yi = circle.position.y;
+        float xf = xi + this.x*10;
+        float yf = yi + this.y*10;
 
         canvas.drawLine(xi, yi, xf, yf, this.paint);
         canvas.drawCircle(xi, yi, 5, this.paint);

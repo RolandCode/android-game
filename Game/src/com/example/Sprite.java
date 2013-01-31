@@ -41,14 +41,12 @@ public class Sprite {
 
     public Sprite(boolean fixed) {
         if(!fixed) {
-            Acceleration.setY(1);
+            Acceleration.y = 1;
         }
     }
-
     public Sprite() {
-        Acceleration.setY(1);
+        Acceleration.y = 1;
     }
-
     public void setCurrentDirection(int CurrentDirection){
         this.CurrentDirection = CurrentDirection;
     }
@@ -134,9 +132,9 @@ public class Sprite {
                 break;
         }
     }
-    public void setPosition(int X, int Y){
-        this.Position.setX(X);
-        this.Position.setY(Y);
+    public void setPosition(int x, int y){
+        this.Position.x = x;
+        this.Position.y = y;
         updateShape();
     }
     public Vettore getPosition(){
@@ -203,10 +201,10 @@ public class Sprite {
         return this.Height;
     }
     private void updateShape(){
-        Shape.left = (int)Position.getX();
-        Shape.top = (int)Position.getY();
-        Shape.bottom = (int)Position.getY() + Height;
-        Shape.right = (int)Position.getX() + Width;
+        Shape.left = (int)Position.x;
+        Shape.top = (int)Position.y;
+        Shape.bottom = (int)Position.y + Height;
+        Shape.right = (int)Position.x + Width;
     }
     public Rect getShape(){
         return Shape;
@@ -231,8 +229,8 @@ public class Sprite {
     public void draw(Canvas C, Paint P){
         P.setColor(Colore);
 //        move(1);
-        if(Texture==null)C.drawRect(Position.getX(), Position.getY(), Position.getX()+Width, Position.getY()+Height, P);
-        else C.drawBitmap(Texture, Position.getX(), Position.getY(), P);
+        if(Texture==null)C.drawRect(Position.x, Position.y, Position.x+Width, Position.y+Height, P);
+        else C.drawBitmap(Texture, Position.x, Position.y, P);
     }
 
     public boolean collide(Sprite Oggetto, int type){
@@ -244,8 +242,8 @@ public class Sprite {
     }
     public void onCollision(Sprite other) {
 //    	Vettore opposite = (Position.sub(other.Position));
-        Acceleration.setX(0);
-        Acceleration.setY(-1);
+        Acceleration.x = 0;
+        Acceleration.y = -1;
 //    	Speed = Speed.add(opposite.mul(-1));
 //    	Speed.y -= 1;  
 //    	Position.y = 40;
