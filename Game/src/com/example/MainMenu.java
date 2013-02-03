@@ -75,9 +75,13 @@ public class MainMenu extends View implements View.OnTouchListener{
         drawObjects(canvas);
         paint.setColor(Color.WHITE);
         paint.setTextSize(20);
-        canvas.drawText("x: " + GameActivity.accelerometerValues[0], 30, 30, paint);
-        canvas.drawText("y: " + GameActivity.accelerometerValues[1], 30, 50, paint);
-        canvas.drawText("z: " + GameActivity.accelerometerValues[2], 30, 70, paint);
+        canvas.drawText("Yaw: " + GameActivity.orientationValues[0], 30, 30, paint);
+        canvas.drawText("Pitch: " + GameActivity.orientationValues[1], 30, 50, paint);
+        canvas.drawText("Roll: " + GameActivity.orientationValues[2], 30, 70, paint);
+
+        canvas.drawText("Sway: " + GameActivity.accelerometerValues[0], 30, 90, paint);
+        canvas.drawText("Surge: " + GameActivity.accelerometerValues[1], 30, 110, paint);
+        canvas.drawText("Heave: " + GameActivity.accelerometerValues[2], 30, 130, paint);
         invalidate();
     }
     

@@ -16,12 +16,12 @@ public class TexturedCircle extends Circle {
     }
 
     protected void drawThis(Canvas canvas, Vector position) {
-        CircleBody circleBody = (CircleBody) body;
+/*        CircleBody circleBody = (CircleBody) body;
         paint.setColor(Color.WHITE);
         canvas.drawCircle(position.x, position.y, circleBody.radius, paint);
         paint.setColor(this.color);
         canvas.drawCircle(position.x, position.y, circleBody.radius-1.5f, paint);
-
+*/
         canvas.drawBitmap(texture, position.x-this.radius, position.y-this.radius, paint);
 
     }
