@@ -32,7 +32,7 @@ public class MainMenu extends View implements View.OnTouchListener{
             };
             
             elasticDebug.setCallback(elasticCallback);
-            elasticDebug.body.setSpeed(new Vector(15, 15));
+            elasticDebug.body.setSpeed(new Vector(10, 10));
             
         } flagInit = false;
     }

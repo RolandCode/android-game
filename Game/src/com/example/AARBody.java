@@ -11,8 +11,8 @@ public class AARBody extends AABB implements Body {
 	
 	private Entity parent;
 	
-	public Vector speed = new Vector();
-	public Vector acceleration = new Vector();
+	protected Vector speed = new Vector();
+	protected Vector acceleration = new Vector();
 	
 	public AARBody(PhysicsEngine engine, Entity parent, Vector center, Vector size) {
 		super(center, size);
@@ -24,9 +24,8 @@ public class AARBody extends AABB implements Body {
 		return this;
 	}
 
-	public boolean collide(Body other) throws Exception {
-		other.collide(this);
-		return false;
+	public boolean collide(Body other) {
+		return other.collide(this);
 	}
 
 	public Entity getParent() {
@@ -116,6 +115,10 @@ public class AARBody extends AABB implements Body {
 	public void wallCollision() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public Vector getSpeed() {
+		return speed;
 	}
 	
 

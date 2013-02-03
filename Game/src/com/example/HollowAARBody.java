@@ -86,7 +86,6 @@ public class HollowAARBody extends AARBody {
 	public boolean collideImpl(HollowAARBody oth) {
 		return false;
 	}
-	
 
 	public void debugDraw() {
 		Debug.drawRectangle(insideCorners());

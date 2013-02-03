@@ -12,6 +12,7 @@ public class Circle extends Sprite {
     public ArrayList<Circle> childrens = new ArrayList<Circle>();
     public LancioElastico lancio = new LancioElastico(this);
     public boolean alive = true;
+	protected boolean threadFlag = false;
 
     public Circle(PhysicsEngine engine,  float radius) {
         CircleBody body = new CircleBody(engine, this, new Vector(), radius); 
@@ -50,6 +51,7 @@ public class Circle extends Sprite {
         this.drawLancio(canvas);
     }
     
+    @Override
     public void processEvent(float[] eventInformation) {
     	this.gestisciEventi(eventInformation[0], eventInformation[1], (int)eventInformation[2]);
     }
@@ -69,21 +71,21 @@ public class Circle extends Sprite {
         }
     }
 
-    //public void createChildrens(int number){
-        //for(int i = 0; i < number; i++){
-            //this.childrens.add(new Circle(
-                    //this.position.x,
-                    //this.position.y,
-                    //this.radius/number,
-                    //this.color,
-                    //new Vector(this.speed.x/number, this.speed.y/number)));
-        //}
-    //}
+    public void createChildrens(int number){
+        for(int i = 0; i < number; i++){
+            this.childrens.add(new Circle(
+                    ((CircleBody)body).phEngine,
+                    getCenter(),
+                    ((CircleBody)body).radius/number,
+                    this.color,
+                    this.body.getSpeed().div(number)));
+        }
+    }
 
-    //public void destroy(int child){
-        //this.createChildrens(child);
-        //this.alive = false;
-    //}
+    public void destroy(int child){
+        this.createChildrens(child);
+        this.alive = false;
+    }
 
     protected void gestisciEventi(float x, float y, int evento){
         switch (evento){
@@ -100,23 +102,23 @@ public class Circle extends Sprite {
     }
 
 
-    //private void ripristinaColore(final int t, final Circle other){
-        //new Thread(
-                //new Runnable(){
-                    //public void run(){
-                        //try {
-                            //threadFlag = true;
-                            //Thread.sleep(t);
-                            //color = originalColor;
-                            //other.color = other.originalColor;
-                            //threadFlag = false;
-                        //} catch (InterruptedException e) {
-                            //e.printStackTrace();
-                        //}
-                    //}
-                //}
-        //).start();
-    //}
+    private void ripristinaColore(final int t, final Circle other){
+        new Thread(
+                new Runnable(){
+                    public void run(){
+                        try {
+                            threadFlag  = true;
+                            Thread.sleep(t);
+                            color = originalColor;
+                            other.color = other.originalColor;
+                            threadFlag = false;
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+        ).start();
+    }
 
 
     public void gestisciLancio(float x, float y, int fase){
@@ -136,6 +138,5 @@ public class Circle extends Sprite {
     public boolean isTouched(float x, float y){
        return UtilCollisioni.isTouched(new Vector(x, y), this);
     }
-
 
 }

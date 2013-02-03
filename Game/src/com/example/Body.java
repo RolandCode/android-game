@@ -6,7 +6,7 @@ public interface Body {
 
   public AABB getAABB();
 	
-  public boolean collide(Body other) throws Exception;
+  public boolean collide(Body other);
 
   public Entity getParent();
   
@@ -15,6 +15,7 @@ public interface Body {
   
   public Vector getLocalCenter();
   
+  public Vector getSpeed();
   public void setSpeed(Vector speed);
   
   public void update(int ms);

@@ -1,8 +1,8 @@
 package com.example;
 
 public class AbstractCircle {
-	float radius;
-	Vector center;
+	protected float radius;
+	protected Vector center;
 	
 	public AbstractCircle(Vector center, float radius) {
 		this.center = center;

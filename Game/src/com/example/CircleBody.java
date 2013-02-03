@@ -12,11 +12,13 @@ public class CircleBody extends AbstractCircle implements Body {
   public Vector speed = new Vector();
   public Vector acceleration = new Vector();
   public Entity parent;
+  protected PhysicsEngine phEngine;
 
  public CircleBody(PhysicsEngine engine, Entity parent, Vector center, float radius) {
    super(center, radius);
    parent.body = this;
-   engine.addBody(this);
+   phEngine = engine;
+   phEngine.addBody(this);
  }
 
 
@@ -25,20 +27,7 @@ public class CircleBody extends AbstractCircle implements Body {
   }
   
   // Double dispath, first call
-  public boolean collide(Body body) throws Exception {
-/*    boolean collide = false;*/
-    //if (CircleBody.class.isInstance(body)) {
-      //collide = this.collide((CircleBody)body);
-    //} else 
-    
-    //if(collide) {
-      //parent.onCollision(body.parent);
-      //return true;
-    //} else {
-      //throw new Exception("Unhandled collider");
-    //}
-	  
-	// Double dispatch, second call:
+  public boolean collide(Body body) {
     return body.collideImpl(this);
   }
 
@@ -206,6 +195,9 @@ public void setCenter(Vector center) {
 	this.center = center;
 }
 
+public Vector getSpeed() {
+	return speed;
+}
 
 public void setSpeed(Vector speed) {
 	this.speed = speed;
