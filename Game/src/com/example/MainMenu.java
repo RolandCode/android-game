@@ -1,31 +1,38 @@
 package com.example;
 
-
 import android.content.*;
 import android.graphics.*;
 import android.view.*;
 import java.util.*;
 
-public class Elastic extends View implements View.OnTouchListener{
+public class MainMenu extends View implements View.OnTouchListener{
 
     public float[] eventsInformation = {0, 0, 10};
 
-    public ArrayList<Circle> objects = new ArrayList<Circle>();
+    public ArrayList<Sprite> objects = new ArrayList<Sprite>();
     private PhysicsEngine phEngine;
 
     private boolean flagInit = true;
 
-    public Elastic(Context context){ super(context); }
+    public MainMenu(Context context){ super(context); }
 
     void init(){
         if(flagInit){
             phEngine = new PhysicsEngine(); 
-            for (int i = 0; i < 6; i++){
-                objects.add(new Circle(phEngine, new Vector(90+i*90, 50+i*70), 40));
-            }
-//            Entity frame = new Entity();
-//            Vector screenSize = Game.getInstance().getScreenSize();
-//            new HollowAARBody(phEngine, frame, screenSize.div(2), screenSize, new Vector(5, 5));
+            CircleButton elasticDebug = new CircleButton(phEngine, new Vector(100, 60), 80, "Elastic Debug");
+            objects.add(elasticDebug);
+            
+            CircleButton.Callback elasticCallback = new CircleButton.Callback() {
+
+				public void execute() {
+					GameActivity activity = (GameActivity) Game.getInstance().getActivity();
+					activity.setContentView(new Elastic(activity));
+				}
+            	
+            };
+            
+            elasticDebug.setCallback(elasticCallback);
+            elasticDebug.body.setSpeed(new Vector(15, 15));
             
         } flagInit = false;
     }
@@ -39,19 +46,12 @@ public class Elastic extends View implements View.OnTouchListener{
     }
     void updateObjects(){
         phEngine.update(10);
-
-        for (int i = 0; i < objects.size(); i++){
-            if(!objects.get(i).alive){
-                for (Circle child: objects.get(i).childrens){
-                    objects.add(child);
-                } objects.remove(i);
-            }
-        }
     }
+    
     void drawObjects(Canvas canvas){
         updateObjects();
 
-        for(Circle Object: objects){
+        for(Sprite Object: objects){
         	Object.processEvent(eventsInformation);
             Object.draw(canvas);
         }

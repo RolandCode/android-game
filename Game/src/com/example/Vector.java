@@ -4,7 +4,7 @@ package com.example;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
-public final class Vettore {
+public final class Vector {
 
     public float x;
     public float y;
@@ -15,17 +15,17 @@ public final class Vettore {
     private Paint paint = new Paint();
 
 
-    public Vettore() {
+    public Vector() {
         this.x = 0;
         this.y = 0;
     }
 
-    public Vettore(float x, float y) {
+    public Vector(float x, float y) {
         this.x = x;
         this.y = y;
     }
 
-    public Vettore(float module, float arg, boolean modarg){
+    public Vector(float module, float arg, boolean modarg){
         this.update(module, arg, true);
     }
 
@@ -54,64 +54,64 @@ public final class Vettore {
             this.y = (float)(module*Math.sin(Math.toRadians(arg)));
     }
 
-    public Vettore(Vettore altro) {
+    public Vector(Vector altro) {
         this.x = altro.x;
         this.y = altro.y;
     }
 
-    public Vettore add(Vettore altro) {
-        Vettore ret = new Vettore(); // Creiamo un nuovo vettore. Questo sara` il risultato di questa funzione
+    public Vector add(Vector altro) {
+        Vector ret = new Vector(); // Creiamo un nuovo vettore. Questo sara` il risultato di questa funzione
         ret.x = altro.x + x; // sommiamo le componenti x di questo vettore e dell'altro
         ret.y = altro.y + y; // Stessa cosa, con la componente y.
         return ret; // diamo il risultato.
     }
 
-    public Vettore sub(Vettore altro) {
-        Vettore ret = new Vettore();
-        ret.x = x - altro.x ;
+    public Vector sub(Vector altro) {
+        Vector ret = new Vector();
+        ret.x = x - altro.x;
         ret.y = y - altro.y;
         return ret;
     }
 
-    public Vettore mul(Vettore altro) {
-        Vettore ret = new Vettore();
+    public Vector mul(Vector altro) {
+        Vector ret = new Vector();
         ret.x = altro.x * x;
         ret.y = altro.y * y;
         return ret;
     }
 
-    public Vettore mul(float fat) {
-        Vettore ret = new Vettore(this);
+    public Vector mul(float fat) {
+        Vector ret = new Vector(this);
         ret.x *= fat;
         ret.y *= fat;
         return ret;
     }
 
-    public Vettore div(Vettore altro) {
-        Vettore ret = new Vettore();
+    public Vector div(Vector altro) {
+        Vector ret = new Vector();
         ret.x = x / altro.x;
         ret.y = y / altro.y;
         return ret;
     }
 
-    public Vettore div(float fat) {
-        Vettore ret = new Vettore(this);
+    public Vector div(float fat) {
+        Vector ret = new Vector(this);
         ret.x /= fat;
         ret.y /= fat;
         return ret;
     }
 
-    public Vettore dotProduct(Vettore altro) {
-        Vettore ret = new Vettore();
+    public Vector dotProduct(Vector altro) {
+        Vector ret = new Vector();
         // TODO: implementare questo metodo.
         // usare la funzione Math.cos()
         //
         return ret;
     }
 
-    public Vettore normalize() {
+    public Vector normalize() {
         int magn = magnitude();
-        Vettore ret = new Vettore();
+        Vector ret = new Vector();
         ret.x = x / magn;
         ret.y = y / magn;
         return ret;
@@ -120,16 +120,20 @@ public final class Vettore {
     public int magnitude() {
         return (int) Math.sqrt(x*x + y*y);
     }
+    
+    public float sqrMagnitute() {
+    	return x*x + y*y;
+    }
 
     public String toString() {
         return "(" + x + "," + y + ")";
     }
 
 
-    public void draw(Canvas canvas, Circle circle, int c){
+    public void draw(Canvas canvas, Vector pos, int c){
         this.paint.setColor(c);
-        float xi = circle.position.x;
-        float yi = circle.position.y;
+        float xi = pos.x;
+        float yi = pos.y;
         float xf = xi + this.x*10;
         float yf = yi + this.y*10;
 

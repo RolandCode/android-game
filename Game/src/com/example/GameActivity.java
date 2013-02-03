@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class MyActivity extends Activity
+public class GameActivity extends Activity
 {
     public void onCreate(Bundle savedInstanceState)
     {
@@ -13,6 +13,7 @@ public class MyActivity extends Activity
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(new Elastic(this));
+        Game.getInstance().initialize(this);
+        setContentView(new MainMenu(this));
     }
 }
