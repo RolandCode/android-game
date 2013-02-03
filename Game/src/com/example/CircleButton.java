@@ -1,6 +1,7 @@
 package com.example;
 
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.MotionEvent;
 
@@ -23,8 +24,22 @@ public class CircleButton extends Circle {
         switch (evento){
             case MotionEvent.ACTION_DOWN:
                 if (this.isTouched(x, y))
-                	executeCallback();
+                    giveFeedback();
                 break;
+
+            case MotionEvent.ACTION_UP:
+                this.color = this.originalColor;
+                if (this.isTouched(x, y))
+                    executeCallback();
+                break;
+
+            case MotionEvent.ACTION_MOVE:
+                if (this.isTouched(x, y))
+                    this.color = Color.BLUE;
+                else this.color = this.originalColor;
+                break;
+
+
             default:
             	return;
         }
@@ -38,13 +53,17 @@ public class CircleButton extends Circle {
         paint.setTextAlign(Paint.Align.CENTER);
         canvas.drawText(text, getCenter().x, getCenter().y, paint);
     }
-	
-	public void executeCallback() {
-		if(callback != null)
-			callback.execute();
-	}
-	
-	public void setCallback(Callback callback) {
+
+    public void executeCallback() {
+        if(callback != null)
+            callback.execute();
+    }
+
+    public void giveFeedback() {
+        this.color = Color.BLUE;
+    }
+
+    public void setCallback(Callback callback) {
 		this.callback = callback;
 	}
 

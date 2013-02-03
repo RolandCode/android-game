@@ -10,6 +10,4 @@ public class AABB {
 
 	public Vector center;
 	public Vector size;
-
-	
 }

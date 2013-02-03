@@ -2,8 +2,6 @@
 package com.example;
 import com.example.HollowAARBody.Side;
 
-import android.graphics.*;
-
 public class CircleBody extends AbstractCircle implements Body {
   
   public float radius;
@@ -20,7 +18,6 @@ public class CircleBody extends AbstractCircle implements Body {
    phEngine = engine;
    phEngine.addBody(this);
  }
-
 
   public AABB getAABB() {
     return new AABB(center, new Vector(radius*2, radius*2));	
@@ -39,9 +36,13 @@ public class CircleBody extends AbstractCircle implements Body {
 
   }
 
-    private void applyFriction(float c){
-        if (this.speed.getModule() <= 2*this.acceleration.getModule()) this.acceleration.setModule(0);
-        else this.acceleration.setModule(c);
+    private void applyFriction(float decelerazione){
+        if (this.speed.getModule() <= 2*decelerazione){
+            this.acceleration.setModule(0);
+            this.speed.setModule(0);
+        }
+
+        else this.acceleration.setModule(decelerazione);
         this.acceleration.setArg((float)Math.toDegrees(this.speed.getArg())+180);
     }
   

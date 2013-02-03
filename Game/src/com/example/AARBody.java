@@ -1,9 +1,5 @@
 package com.example;
 
-import com.example.HollowAARBody.Side;
-
-import android.graphics.Canvas;
-
 public class AARBody extends AABB implements Body {
 	
 	public enum Side {L, T, R, B};
@@ -13,8 +9,8 @@ public class AARBody extends AABB implements Body {
 	
 	protected Vector speed = new Vector();
 	protected Vector acceleration = new Vector();
-	
-	public AARBody(PhysicsEngine engine, Entity parent, Vector center, Vector size) {
+
+    public AARBody(PhysicsEngine engine, Entity parent, Vector center, Vector size) {
 		super(center, size);
 		this.parent = parent;
 		engine.addBody(this);	
@@ -41,9 +37,9 @@ public class AARBody extends AABB implements Body {
 	}
 
 	public void update(int ms) {
-		this.speed = this.speed.add(this.acceleration);
-		this.center = this.center.add(this.speed);
-	}
+            this.speed = this.speed.add(this.acceleration);
+            this.center = this.center.add(this.speed);
+    }
 	
 
 	public boolean collideImpl(CircleBody oth) {
@@ -120,6 +116,4 @@ public class AARBody extends AABB implements Body {
 	public Vector getSpeed() {
 		return speed;
 	}
-	
-
 }

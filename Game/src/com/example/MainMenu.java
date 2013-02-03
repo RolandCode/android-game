@@ -18,19 +18,26 @@ public class MainMenu extends View implements View.OnTouchListener{
 
     void init(){
         if(flagInit){
-            phEngine = new PhysicsEngine(); 
-            CircleButton elasticDebug = new CircleButton(phEngine, new Vector(100, 60), 80, "Elastic Debug");
+            phEngine = new PhysicsEngine();
+            CircleButton elasticDebug = new CircleButton(phEngine, new Vector(240, 480), 50, "Elastic Debug");
+            CircleButton button0 = new CircleButton(phEngine, new Vector(240, 480), 50, "Button 0");
+            CircleButton button1 = new CircleButton(phEngine, new Vector(240, 480), 50, "Button 1");
+            CircleButton button2 = new CircleButton(phEngine, new Vector(240, 480), 50, "Button 2");
+
             objects.add(elasticDebug);
-            
+            objects.add(button0);
+            objects.add(button1);
+            objects.add(button2);
+
             CircleButton.Callback elasticCallback = new CircleButton.Callback() {
 
-				public void execute() {
-					GameActivity activity = (GameActivity) Game.getInstance().getActivity();
-					activity.setContentView(new Elastic(activity));
-				}
-            	
+                public void execute() {
+                    GameActivity activity = (GameActivity) Game.getInstance().getActivity();
+                    activity.setContentView(new Elastic(activity));
+                }
+
             };
-            
+
             elasticDebug.setCallback(elasticCallback);
             elasticDebug.body.setSpeed(new Vector(10, 10));
             

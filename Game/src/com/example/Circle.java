@@ -14,8 +14,13 @@ public class Circle extends Sprite {
     public boolean alive = true;
 	protected boolean threadFlag = false;
 
+    public Circle(PhysicsEngine engine) {
+        CircleBody body = new CircleBody(engine, this, new Vector(), 50);
+        body.radius = 50;
+        this.body = body;
+    }
     public Circle(PhysicsEngine engine,  float radius) {
-        CircleBody body = new CircleBody(engine, this, new Vector(), radius); 
+        CircleBody body = new CircleBody(engine, this, new Vector(), radius);
         body.radius = radius;
         this.body = body;
     }
@@ -101,7 +106,6 @@ public class Circle extends Sprite {
         }
     }
 
-
     private void ripristinaColore(final int t, final Circle other){
         new Thread(
                 new Runnable(){
@@ -119,7 +123,6 @@ public class Circle extends Sprite {
                 }
         ).start();
     }
-
 
     public void gestisciLancio(float x, float y, int fase){
         switch (fase){
