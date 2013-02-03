@@ -14,7 +14,11 @@ public class MainMenu extends View implements View.OnTouchListener{
 
     private boolean flagInit = true;
 
-    public MainMenu(Context context){ super(context); }
+    private Paint paint = new Paint();
+
+    public MainMenu(Context context){
+        super(context);
+    }
 
     void init(){
         if(flagInit){
@@ -69,6 +73,11 @@ public class MainMenu extends View implements View.OnTouchListener{
         init();
         Game.getInstance().setCanvas(canvas);
         drawObjects(canvas);
+        paint.setColor(Color.WHITE);
+        paint.setTextSize(20);
+        canvas.drawText("x: " + GameActivity.accelerometerValues[0], 30, 30, paint);
+        canvas.drawText("y: " + GameActivity.accelerometerValues[1], 30, 50, paint);
+        canvas.drawText("z: " + GameActivity.accelerometerValues[2], 30, 70, paint);
         invalidate();
     }
     
