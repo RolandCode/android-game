@@ -1,6 +1,5 @@
 package com.example;
 
-import android.R.string;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.view.MotionEvent;
@@ -36,6 +35,7 @@ public class CircleButton extends Circle {
         this.drawThis(canvas, body.getCenter());
         Paint paint = new Paint();
         paint.setARGB(255, 234, 34, 35);
+        paint.setTextAlign(Paint.Align.CENTER);
         canvas.drawText(text, getCenter().x, getCenter().y, paint);
     }
 	
