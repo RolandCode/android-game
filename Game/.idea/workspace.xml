@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc0bc62f-4403-46d8-abea-926923c9d11e" name="Default" comment="Gravity Ball">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/sfondo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/options_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/ball.png" afterPath="$PROJECT_DIR$/res/drawable/ball.png" />
+    <list default="true" id="bc0bc62f-4403-46d8-abea-926923c9d11e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/explosion.wav" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/example/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/R.java" afterPath="$PROJECT_DIR$/gen/com/example/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Elastic.java" afterPath="$PROJECT_DIR$/src/com/example/Elastic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/GameActivity.java" afterPath="$PROJECT_DIR$/src/com/example/GameActivity.java" />
     </list>
     <ignored path="ImpossibleLike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -138,7 +132,7 @@
       <file leaf-file-name="options_menu.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/menu/options_menu.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="23" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
+            <state line="7" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -698,12 +692,16 @@
       <created>1360002010016</created>
       <updated>1360002010016</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Gravity Ball">
+      <created>1360003686106</created>
+      <updated>1360003686106</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49430525" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -719,7 +717,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15373352" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15373352" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.31659058" sideWeight="0.476082" order="2" side_tool="false" content_ui="tabs" x="-970" y="305" width="1317" height="151" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -766,7 +764,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Options Menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gravity Ball" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -790,8 +788,8 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="class TexturedCircle" />
     <MESSAGE value="Accelerometer Values" />
-    <MESSAGE value="Gravity Ball" />
     <MESSAGE value="Options Menu" />
+    <MESSAGE value="Gravity Ball" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -884,7 +882,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/options_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="23" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
+        <state line="7" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
