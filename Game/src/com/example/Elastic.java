@@ -24,7 +24,7 @@ public class Elastic extends View implements View.OnTouchListener{
         if(flagInit){
             phEngine = new PhysicsEngine(); 
             for (int i = 0; i < 6; i++){
-                circles.add(new TexturedCircle(phEngine, 40, R.drawable.ball, this.resource));
+                circles.add(new TexturedCircle(phEngine, 60, R.drawable.ball, this.resource));
             }
 //            Entity frame = new Entity();
 //            Vector screenSize = Game.getInstance().getScreenSize();
@@ -67,5 +67,4 @@ public class Elastic extends View implements View.OnTouchListener{
         drawObjects(canvas);
         invalidate();
     }
-    
 }
