@@ -53,9 +53,9 @@ public class GameActivity extends Activity implements SensorEventListener {
                 this.orientationValues = sensorValues;
                 break;
             case Sensor.TYPE_ACCELEROMETER:
-                float x = sensorValues[0]; if (x > -1 && x < 1) x = 0;
-                float y = sensorValues[1]; if (y > -1 && y < 1) y = 0;
-                float z = sensorValues[2]; if (z > -1 && z < 1) z = 0;
+                float x = sensorValues[0]; if (x > -0.5 && x < 0.5) x = 0;
+                float y = sensorValues[1]; if (y > -0.5 && y < 0.5) y = 0;
+                float z = sensorValues[2]; if (z > -0.5 && z < 0.5) z = 0;
 
                 this.accelerometerValues[0] = x;
                 this.accelerometerValues[1] = y;

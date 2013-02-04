@@ -28,7 +28,7 @@ public class GravityBall extends View {
 
     void updateObjects(){
         phEngine.update(10);
-        ball.body.setSpeed(new Vector(-GameActivity.accelerometerValues[0], GameActivity.accelerometerValues[1]));
+        ball.body.setSpeed(new Vector(-GameActivity.accelerometerValues[0]*3, GameActivity.accelerometerValues[1]*3));
     }
 
     void drawObjects(Canvas canvas){
