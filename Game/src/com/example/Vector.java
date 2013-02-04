@@ -9,9 +9,6 @@ public final class Vector {
     public float x;
     public float y;
 
-    public static final int X_Y = 0;
-    public static final int MOD_ARG = 1;
-
     private Paint paint = new Paint();
 
 

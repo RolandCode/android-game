@@ -14,9 +14,13 @@ public class TexturedCircle extends Circle {
         this.radius = radius;
         this.texture = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(risorse, imageResource), 2*(int)this.radius, 2*(int)this.radius, true);
     }
+    public TexturedCircle(PhysicsEngine engine, Vector position, float radius, int imageResource, Resources risorse) {
+        super(engine, radius);
+        this.radius = radius;
+        this.texture = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(risorse, imageResource), 2*(int)this.radius, 2*(int)this.radius, true);
+    }
 
     protected void drawThis(Canvas canvas, Vector position) {
         canvas.drawBitmap(texture, position.x-this.radius, position.y-this.radius, paint);
-
     }
 }

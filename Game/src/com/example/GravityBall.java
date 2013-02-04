@@ -2,7 +2,10 @@ package com.example;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -14,15 +17,20 @@ public class GravityBall extends View {
 
     private boolean flagInit = true;
 
-    Resources resource = getResources();
+    Resources risorse = getResources();
     TexturedCircle ball;
+    Bitmap background;
+
+    Paint paint = new Paint();
 
     public GravityBall(Context context){ super(context); }
 
     void init(){
         if(flagInit){
             phEngine = new PhysicsEngine();
-            ball = new TexturedCircle(phEngine, 60, R.drawable.ball, this.resource);
+            ball = new TexturedCircle(phEngine, 60, R.drawable.ball, this.risorse);
+            ball.body.setCenter(new Vector(240, 400));
+            background = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(risorse, R.drawable.sfondo), getWidth(), getHeight(), true);
         } flagInit = false;
     }
 
@@ -38,6 +46,7 @@ public class GravityBall extends View {
 
     public void onDraw(Canvas canvas){
         init();
+        canvas.drawBitmap(background, 0, 0, paint);
         Game.getInstance().setCanvas(canvas);
         drawObjects(canvas);
         invalidate();

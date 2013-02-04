@@ -6,8 +6,8 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.*;
+import android.widget.Toast;
 
 public class GameActivity extends Activity implements SensorEventListener {
     SensorManager sensorManager;
@@ -18,7 +18,6 @@ public class GameActivity extends Activity implements SensorEventListener {
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -35,18 +34,30 @@ public class GameActivity extends Activity implements SensorEventListener {
         setContentView(new MainMenu(this));
     }
 
+    public boolean onCreateOptionsMenu(Menu menu)  {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.options_menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.Opzioni:
+                Toast.makeText(this, "TODO: implement options menu! :D", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.Reset:
+                setContentView(new MainMenu(this));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         Sensor sensor = sensorEvent.sensor;
         float[] sensorValues = sensorEvent.values;
-        boolean mInitialized = false;
-        float mLastX = 0;
-        float mLastY = 0;
-        float mLastZ = 0;
-        float deltaX = 0;
-        float deltaY = 0;
-        float deltaZ = 0;
-        final float NOISE = (float) 2.0;
 
         switch (sensor.getType()){
             case Sensor.TYPE_ORIENTATION:
@@ -61,9 +72,7 @@ public class GameActivity extends Activity implements SensorEventListener {
                 this.accelerometerValues[1] = y;
                 this.accelerometerValues[2] = z;
                 break;
-
         }
-
     }
 
     @Override
