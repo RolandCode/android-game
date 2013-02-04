@@ -15,8 +15,8 @@ public class GameActivity extends Activity implements SensorEventListener {
     public static float[] accelerometerValues = {0, 0, 0};
     public static float[] orientationValues = {0, 0, 0};
 
-    public void onCreate(Bundle savedInstanceState)
-    {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -34,12 +34,14 @@ public class GameActivity extends Activity implements SensorEventListener {
         setContentView(new MainMenu(this));
     }
 
+    @Override
     public boolean onCreateOptionsMenu(Menu menu)  {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.options_menu, menu);
         return true;
     }
 
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.Opzioni:

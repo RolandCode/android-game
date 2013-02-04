@@ -6,6 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Elastic extends View implements View.OnTouchListener{
 
@@ -14,14 +15,16 @@ public class Elastic extends View implements View.OnTouchListener{
     public ArrayList<Circle> circles = new ArrayList<Circle>();
     private PhysicsEngine phEngine;
 
+    private Random random = new Random();
+
     public Elastic(Context context){
         super(context);
 
         phEngine = new PhysicsEngine();
         for (int i = 0; i < 6; i++){
             circles.add(new Circle(phEngine, 50));
+            circles.get(i).body.setCenter(new Vector(random.nextInt(480), random.nextInt(800)));
         }
-
     }
 
     public boolean onTouch(View p1, MotionEvent motionEvent) {
