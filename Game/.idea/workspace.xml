@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc0bc62f-4403-46d8-abea-926923c9d11e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/enter.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk.res" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk.res" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk.unaligned" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk.unaligned" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/classes.dex" afterPath="$PROJECT_DIR$/out/production/Game/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R$layout.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R$string.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/SoundExample.java" afterPath="$PROJECT_DIR$/src/com/example/SoundExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/R.java" afterPath="$PROJECT_DIR$/gen/com/example/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/click.wav" afterPath="$PROJECT_DIR$/res/raw/click.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/MainMenu.java" afterPath="$PROJECT_DIR$/src/com/example/MainMenu.java" />
     </list>
     <ignored path="ImpossibleLike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +71,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SoundExample.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SoundExample.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/SoundExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="43" selection-start="680" selection-end="680" vertical-scroll-proportion="0.2730159">
+            <state line="34" column="64" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#941#1086#0" expanded="true" />
                 <element signature="e#1071#1072#0" expanded="true" />
@@ -91,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainMenu.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
+            <state line="46" column="130" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.35079366">
               <folding />
             </state>
           </provider>
@@ -103,7 +113,7 @@
       <file leaf-file-name="CircleButton.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/CircleButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="34" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0">
+            <state line="26" column="27" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="method#drawThis#0;class#CircleButton#0" expanded="false" />
               </folding>
@@ -141,10 +151,10 @@
         <option value="$PROJECT_DIR$/src/com/example/Vector.java" />
         <option value="$PROJECT_DIR$/src/com/example/GameActivity.java" />
         <option value="$PROJECT_DIR$/gen/com/example/R.java" />
-        <option value="$PROJECT_DIR$/src/com/example/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/com/example/Sound.java" />
         <option value="$PROJECT_DIR$/src/com/example/CircleButton.java" />
         <option value="$PROJECT_DIR$/src/com/example/SoundExample.java" />
+        <option value="$PROJECT_DIR$/src/com/example/MainMenu.java" />
       </list>
     </option>
   </component>
@@ -669,7 +679,11 @@
       <created>1360074611208</created>
       <updated>1360074611208</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="New class Sound and SoundExample; button's feedback sound.">
+      <created>1360074762251</created>
+      <updated>1360074762251</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -773,11 +787,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/example/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="24" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CircleBody.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="13" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" />
@@ -808,18 +817,11 @@
         <state line="13" column="0" selection-start="267" selection-end="319" vertical-scroll-proportion="-0.51111114" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/raw/explosion.wav">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen/com/example/R.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="35" selection-start="801" selection-end="801" vertical-scroll-proportion="0.5952381">
           <folding>
-            <element signature="e#0#1048#0" expanded="true" />
+            <element signature="e#0#1098#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -829,13 +831,6 @@
         <state line="59" column="16" selection-start="2975" selection-end="2975" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/raw/click.wav">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Sound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="19" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
@@ -843,10 +838,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/res/raw/enter.wav">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/SoundExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="64" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#941#1086#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -855,22 +860,33 @@
         <state line="22" column="63" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/raw/explosion.wav">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CircleButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="34" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0">
+        <state line="26" column="27" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="method#drawThis#0;class#CircleButton#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/SoundExample.java">
+    <entry file="file://$PROJECT_DIR$/res/raw/click.wav">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="43" selection-start="680" selection-end="680" vertical-scroll-proportion="0.2730159">
-          <folding>
-            <element signature="e#941#1086#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="130" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.35079366">
+          <folding />
         </state>
       </provider>
     </entry>
