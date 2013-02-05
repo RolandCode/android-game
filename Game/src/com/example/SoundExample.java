@@ -25,7 +25,7 @@ public class SoundExample extends View implements View.OnTouchListener{
 
     Sound suoni = new Sound();
 
-    public SoundExample(Context context){ super(context); }
+    public SoundExample(Context context){  super(context);  }
 
     void init(){
         if(flagInit){

@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc0bc62f-4403-46d8-abea-926923c9d11e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/click.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/Sound.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/SoundExample.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/example/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/R.java" afterPath="$PROJECT_DIR$/gen/com/example/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/CircleButton.java" afterPath="$PROJECT_DIR$/src/com/example/CircleButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/GameActivity.java" afterPath="$PROJECT_DIR$/src/com/example/GameActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/MainMenu.java" afterPath="$PROJECT_DIR$/src/com/example/MainMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Vector.java" afterPath="$PROJECT_DIR$/src/com/example/Vector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/SoundExample.java" afterPath="$PROJECT_DIR$/src/com/example/SoundExample.java" />
     </list>
     <ignored path="ImpossibleLike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,9 +64,10 @@
       <file leaf-file-name="SoundExample.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/SoundExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="39" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.3809524">
+            <state line="27" column="43" selection-start="680" selection-end="680" vertical-scroll-proportion="0.2730159">
               <folding>
-                <element signature="e#1069#1070#0" expanded="true" />
+                <element signature="e#941#1086#0" expanded="true" />
+                <element signature="e#1071#1072#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,7 +122,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="Physics" />
       </map>
     </option>
   </component>
@@ -150,8 +143,8 @@
         <option value="$PROJECT_DIR$/gen/com/example/R.java" />
         <option value="$PROJECT_DIR$/src/com/example/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/com/example/Sound.java" />
-        <option value="$PROJECT_DIR$/src/com/example/SoundExample.java" />
         <option value="$PROJECT_DIR$/src/com/example/CircleButton.java" />
+        <option value="$PROJECT_DIR$/src/com/example/SoundExample.java" />
       </list>
     </option>
   </component>
@@ -672,7 +665,11 @@
       <created>1360003723489</created>
       <updated>1360003723489</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="New class Sound and SoundExample; button's feedback sound.">
+      <created>1360074611208</created>
+      <updated>1360074611208</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -693,7 +690,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1522694" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1522694" sideWeight="0.67275494" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.14916286" sideWeight="0.476082" order="2" side_tool="false" content_ui="tabs" x="-970" y="305" width="1317" height="151" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -740,7 +737,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gravity Ball" />
+    <option name="LAST_COMMIT_MESSAGE" value="New class Sound and SoundExample; button's feedback sound." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -766,6 +763,7 @@
     <MESSAGE value="Accelerometer Values" />
     <MESSAGE value="Options Menu" />
     <MESSAGE value="Gravity Ball" />
+    <MESSAGE value="New class Sound and SoundExample; button's feedback sound." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -868,9 +866,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/SoundExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="39" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.3809524">
+        <state line="27" column="43" selection-start="680" selection-end="680" vertical-scroll-proportion="0.2730159">
           <folding>
-            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#941#1086#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
           </folding>
         </state>
       </provider>
