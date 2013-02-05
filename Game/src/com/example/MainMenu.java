@@ -23,6 +23,8 @@ public class MainMenu extends View implements View.OnTouchListener{
 
     Bitmap background;
 
+    Sound suoni = new Sound();
+
     public MainMenu(Context context){
         super(context);
     }
@@ -35,33 +37,46 @@ public class MainMenu extends View implements View.OnTouchListener{
             CircleButton elasticDebug = new CircleButton(phEngine, new Vector(240, 400), 50, "Elastic Debug");
             CircleButton gravityBall = new CircleButton(phEngine, new Vector(240, 400), 50, "Gravity Ball");
             CircleButton reset = new CircleButton(phEngine, new Vector(240, 500), 50, "Reset");
-            CircleButton b0 = new CircleButton(phEngine, new Vector(240, 300), 50, "Button");
+            CircleButton soundExample = new CircleButton(phEngine, new Vector(240, 300), 50, "Sound Example");
+
+            soundExample.body.setSpeed(new Vector(3, 270, true));
+            reset.body.setSpeed(new Vector(3, 90, true));
+            elasticDebug.body.setSpeed(new Vector(3, 0, true));
+            gravityBall.body.setSpeed(new Vector(3, 180, true));
 
             objects.add(elasticDebug);
             objects.add(gravityBall);
             objects.add(reset);
-            objects.add(b0);  b0.body.setSpeed(new Vector(3, 270, true));
+            objects.add(soundExample);
 
-            CircleButton.Callback resetCallback = new CircleButton.Callback() {
+            soundExample.setCallback(new CircleButton.Callback() {
+                public void execute() {
+                    GameActivity activity = (GameActivity) Game.getInstance().getActivity();
+                    activity.setContentView(new SoundExample(activity));
+                }
+            });
+
+            reset.setCallback(new CircleButton.Callback() {
+                @Override
                 public void execute() {
                     GameActivity activity = (GameActivity) Game.getInstance().getActivity();
                     activity.setContentView(new MainMenu(activity));
                 }
-            }; reset.setCallback(resetCallback); reset.body.setSpeed(new Vector(3, 90, true));
+            });
 
-            CircleButton.Callback elasticCallback = new CircleButton.Callback() {
+            elasticDebug.setCallback(new CircleButton.Callback() {
                 public void execute() {
                     GameActivity activity = (GameActivity) Game.getInstance().getActivity();
                     activity.setContentView(new Elastic(activity));
                 }
-            }; elasticDebug.setCallback(elasticCallback); elasticDebug.body.setSpeed(new Vector(3, 0, true));
+            });
 
-            CircleButton.Callback gravityBallCallback = new CircleButton.Callback() {
+            gravityBall.setCallback(new CircleButton.Callback() {
                 public void execute() {
                     GameActivity activity = (GameActivity) Game.getInstance().getActivity();
                     activity.setContentView(new GravityBall(activity));
                 }
-            }; gravityBall.setCallback(gravityBallCallback); gravityBall.body.setSpeed(new Vector(3, 180, true));
+            });
 
         } flagInit = false;
     }

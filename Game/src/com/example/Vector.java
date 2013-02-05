@@ -126,7 +126,6 @@ public final class Vector {
         return "(" + x + "," + y + ")";
     }
 
-
     public void draw(Canvas canvas, Vector pos, int c){
         this.paint.setColor(c);
         float xi = pos.x;

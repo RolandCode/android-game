@@ -5,19 +5,22 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.Toast;
 
 public class GameActivity extends Activity implements SensorEventListener {
-    SensorManager sensorManager;
 
+    SensorManager sensorManager;
     public static float[] accelerometerValues = {0, 0, 0};
     public static float[] orientationValues = {0, 0, 0};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -51,6 +54,7 @@ public class GameActivity extends Activity implements SensorEventListener {
             case R.id.Reset:
                 setContentView(new MainMenu(this));
                 return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

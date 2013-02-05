@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc0bc62f-4403-46d8-abea-926923c9d11e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/explosion.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/click.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/Sound.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/SoundExample.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/example/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/R.java" afterPath="$PROJECT_DIR$/gen/com/example/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/CircleButton.java" afterPath="$PROJECT_DIR$/src/com/example/CircleButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/GameActivity.java" afterPath="$PROJECT_DIR$/src/com/example/GameActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/MainMenu.java" afterPath="$PROJECT_DIR$/src/com/example/MainMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Vector.java" afterPath="$PROJECT_DIR$/src/com/example/Vector.java" />
     </list>
     <ignored path="ImpossibleLike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,44 +69,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/MainMenu.java">
+      <file leaf-file-name="SoundExample.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/SoundExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="75" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
+            <state line="37" column="39" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.3809524">
               <folding>
-                <element signature="e#1512#1775#0" expanded="true" />
-                <element signature="e#1760#1761#0" expanded="true" />
-                <element signature="e#1910#2172#0" expanded="true" />
-                <element signature="e#2157#2158#0" expanded="true" />
-                <element signature="e#2326#2592#0" expanded="true" />
-                <element signature="e#2577#2578#0" expanded="true" />
+                <element signature="e#1069#1070#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GravityBall.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/GravityBall.java">
+      <file leaf-file-name="Sound.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/Sound.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="12" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vector.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/Vector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="11" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="45" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
+            <state line="17" column="19" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,60 +92,28 @@
       <file leaf-file-name="GameActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/GameActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="33" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0">
+            <state line="22" column="63" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/MainMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CircleButton.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/CircleButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="85" column="34" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="method#onCreate#0;class#GameActivity#0" expanded="false" />
-                <element signature="method#onCreateOptionsMenu#0;class#GameActivity#0" expanded="false" />
-                <element signature="method#onOptionsItemSelected#0;class#GameActivity#0" expanded="false" />
-                <element signature="method#onSensorChanged#0;class#GameActivity#0" expanded="false" />
+                <element signature="method#drawThis#0;class#CircleButton#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Elastic.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/Elastic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="35" selection-start="525" selection-end="525" vertical-scroll-proportion="0.4194079">
-              <folding>
-                <element signature="e#372#380#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="options_menu.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/menu/options_menu.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TexturedCircle.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/TexturedCircle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="90" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Circle.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/Circle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="39" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Body.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/Body.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="22" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -183,22 +136,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/AABB.java" />
-        <option value="$PROJECT_DIR$/src/com/example/CircleButton.java" />
-        <option value="$PROJECT_DIR$/src/com/example/AARBody.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Circle.java" />
         <option value="$PROJECT_DIR$/src/com/example/TexturedObject.java" />
         <option value="$PROJECT_DIR$/src/com/example/CircleBody.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Vector.java" />
         <option value="$PROJECT_DIR$/src/com/example/HollowAARBody.java" />
         <option value="$PROJECT_DIR$/src/com/example/Drawer.java" />
         <option value="$PROJECT_DIR$/src/com/example/ElasticTextured.java" />
         <option value="$PROJECT_DIR$/src/com/example/TexturedCircle.java" />
         <option value="$PROJECT_DIR$/src/com/example/GravityBall.java" />
-        <option value="$PROJECT_DIR$/src/com/example/MainMenu.java" />
         <option value="$PROJECT_DIR$/res/menu/options_menu.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/GameActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/Elastic.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Vector.java" />
+        <option value="$PROJECT_DIR$/src/com/example/GameActivity.java" />
+        <option value="$PROJECT_DIR$/gen/com/example/R.java" />
+        <option value="$PROJECT_DIR$/src/com/example/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Sound.java" />
+        <option value="$PROJECT_DIR$/src/com/example/SoundExample.java" />
+        <option value="$PROJECT_DIR$/src/com/example/CircleButton.java" />
       </list>
     </option>
   </component>
@@ -338,6 +291,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImpossibleLike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -388,6 +359,7 @@
       <recent name="com.example" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git-root\android-game\Game\res\raw" />
       <recent name="C:\git-root\android-game\Game\res\menu" />
       <recent name="C:\git-root\android-game\Game\res\drawable" />
       <recent name="C:\Users\Roland\android-game\Game\res\drawable" />
@@ -696,19 +668,23 @@
       <created>1360003686106</created>
       <updated>1360003686106</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Gravity Ball">
+      <created>1360003723489</created>
+      <updated>1360003723489</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49430525" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39965695" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328152" sideWeight="0.49734244" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724506" sideWeight="0.49734244" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49734244" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.48823082" order="9" side_tool="false" content_ui="tabs" />
@@ -717,8 +693,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15373352" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.31659058" sideWeight="0.476082" order="2" side_tool="false" content_ui="tabs" x="-970" y="305" width="1317" height="151" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1522694" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.14916286" sideWeight="0.476082" order="2" side_tool="false" content_ui="tabs" x="-970" y="305" width="1317" height="151" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49734244" order="1" side_tool="false" content_ui="tabs" />
@@ -799,118 +775,102 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/example/LancioElastico.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="35" selection-end="35" vertical-scroll-proportion="0.053968254" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/HollowAARBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="482" selection-end="482" vertical-scroll-proportion="0.4047619" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Android SDK/android-sdk/platforms/android-8/android.jar!/android/view/SoundEffectConstants.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="35" selection-end="35" vertical-scroll-proportion="0.05592105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PhysicsEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="24" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CircleBody.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="45" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" />
+        <state line="4" column="13" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/GravityBall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="1546" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Android SDK/android-sdk/platforms/android-8/android.jar!/android/media/SoundPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="5" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/EntityInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Elastic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="267" selection-end="319" vertical-scroll-proportion="-0.51111114" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/raw/explosion.wav">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Vector.java">
+    <entry file="file://$PROJECT_DIR$/gen/com/example/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="11" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.0" />
+        <state line="26" column="35" selection-start="801" selection-end="801" vertical-scroll-proportion="0.5952381">
+          <folding>
+            <element signature="e#0#1048#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Circle.java">
+    <entry file="jar://C:/Android SDK/android-sdk/platforms/android-8/android.jar!/android/media/MediaPlayer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="39" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.0">
+        <state line="59" column="16" selection-start="2975" selection-end="2975" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/raw/click.wav">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Body.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sound.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+        <state line="17" column="19" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="75" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1512#1775#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1910#2172#0" expanded="true" />
-            <element signature="e#2157#2158#0" expanded="true" />
-            <element signature="e#2326#2592#0" expanded="true" />
-            <element signature="e#2577#2578#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/options_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/TexturedCircle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="90" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
+        <state line="80" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/GameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="33" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0">
+        <state line="22" column="63" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/CircleButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="34" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="method#onCreate#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#GameActivity#0" expanded="false" />
-            <element signature="method#onSensorChanged#0;class#GameActivity#0" expanded="false" />
+            <element signature="method#drawThis#0;class#CircleButton#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Elastic.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/SoundExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="35" selection-start="525" selection-end="525" vertical-scroll-proportion="0.4194079">
+        <state line="37" column="39" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.3809524">
           <folding>
-            <element signature="e#372#380#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
           </folding>
         </state>
       </provider>
