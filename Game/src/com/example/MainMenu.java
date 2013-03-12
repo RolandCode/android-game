@@ -32,8 +32,6 @@ public class MainMenu extends View implements View.OnTouchListener{
     void init(){
         if(flagInit){
 
-            suoni.add("Enter", R.raw.enter);
-
             background = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(risorse, R.drawable.sfondo), getWidth(), getHeight(), true);
             phEngine = new PhysicsEngine();
             CircleButton elasticDebug = new CircleButton(phEngine, new Vector(240, 400), 50, "Elastic Debug");
@@ -41,10 +39,10 @@ public class MainMenu extends View implements View.OnTouchListener{
             CircleButton reset = new CircleButton(phEngine, new Vector(240, 500), 50, "Reset");
             CircleButton soundExample = new CircleButton(phEngine, new Vector(240, 300), 50, "Sound Example");
 
-            soundExample.body.setSpeed(new Vector(4, 270, true));
-            reset.body.setSpeed(new Vector(4, 90, true));
-            elasticDebug.body.setSpeed(new Vector(4, 0, true));
-            gravityBall.body.setSpeed(new Vector(4, 180, true));
+            soundExample.body.setSpeed(new Vector(3, 270, true));
+            reset.body.setSpeed(new Vector(3, 90, true));
+            elasticDebug.body.setSpeed(new Vector(3, 0, true));
+            gravityBall.body.setSpeed(new Vector(3, 180, true));
 
             objects.add(elasticDebug);
             objects.add(gravityBall);
@@ -79,8 +77,6 @@ public class MainMenu extends View implements View.OnTouchListener{
                     activity.setContentView(new GravityBall(activity));
                 }
             });
-
-            suoni.playSound("Enter");
 
         } flagInit = false;
     }

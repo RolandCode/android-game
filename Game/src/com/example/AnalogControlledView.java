@@ -6,7 +6,7 @@ import android.graphics.*;
 import android.view.*;
 import java.util.*;
 
-public class Elastic extends View implements View.OnTouchListener{
+public class AnalogControlledView extends View implements View.OnTouchListener{
 
 	public MotionEvent e = null;
 	
@@ -26,24 +26,20 @@ public class Elastic extends View implements View.OnTouchListener{
 	Bitmap background;
 
 	
-   public Elastic(Context context){
+   public AnalogControlledView(Context context){
         super(context);
         phEngine = new PhysicsEngine();
 
 	   background = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(risorse, R.drawable.sfondo), 480, 800, true);
 	   p = new Paint();
-        for (int i = 0; i < 5; i++){
-//			if(i < 2)
-            circles.add(new Circle(phEngine, 50));
-		   circles.get(i).body.setSpeed(new Vector(1, 0, true));
-		   //circles.get(0).body.setLock(true);
-/*		   else if(i < 4) circles.add(new Circle(phEngine, 40,  col[i-2]));
- 
-		   else if(i < 6) circles.add(new Circle(phEngine, 80,  col[i-4]));
-		   circles.get(i).body.setCenter(new Vector(random.nextInt(480), random.nextInt(800))); 
-	  */ }
-	//	analog = new AnalogStick(new Vector(240, 700), 70);
-    //  analog1 = new AnalogStick(new Vector(240, 100), 70);
+        for (int i = 0; i < 4; i++){
+			if(i < 6)
+            circles.add(new Circle(phEngine, 40, col[i]));
+		   else           circles.add(new Circle(phEngine, 40));
+            circles.get(i).body.setCenter(new Vector(random.nextInt(480), random.nextInt(800)));
+        }
+		analog = new AnalogStick(new Vector(240, 700), 70);
+	   analog1 = new AnalogStick(new Vector(240, 100), 70);
 	//	analog.manual = false;
 	}
 
@@ -52,7 +48,7 @@ public class Elastic extends View implements View.OnTouchListener{
         return true;
     }
     void updateObjects(){
-        phEngine.update(1000);
+        phEngine.update(10);
         for (int i = 0; i < circles.size(); i++){
             if(!circles.get(i).alive){
                 for (Circle child: circles.get(i).childrens){
@@ -65,7 +61,7 @@ public class Elastic extends View implements View.OnTouchListener{
         updateObjects();
         for(Circle Object: circles){
             Object.draw(canvas, e);
-/*			if(Object.getCenter().y > canvas.getHeight() - 200 - Object.r){
+			if(Object.getCenter().y > canvas.getHeight() - 200 - Object.r){
 				Object.body.setSpeed(new Vector(Object.body.getSpeed().x, 0));
 				Object.setCenter(new Vector(Object.getCenter().x, canvas.getHeight() - 200 - Object.r));
 			}
@@ -78,7 +74,7 @@ public class Elastic extends View implements View.OnTouchListener{
 			if(Object.getCenter().x > canvas.getWidth() - Object.r || Object.getCenter().x > Object.r){
 				Object.body.setSpeed(new Vector(0, Object.body.getSpeed().y));
 			}
-*/
+
         }
     }
 
@@ -87,7 +83,7 @@ public class Elastic extends View implements View.OnTouchListener{
         Game.getInstance().setCanvas(canvas);
     	canvas.drawBitmap(background, 0, 0, p);
         drawObjects(canvas);
-/*		
+		
 		analog.draw(canvas, e);
 
 		analog1.draw(canvas, e);
@@ -95,10 +91,10 @@ public class Elastic extends View implements View.OnTouchListener{
 		if(analog.pressed) circles.get(0).body.setSpeed(analog.axis.mul(0.1f));
 		if(analog1.pressed) circles.get(1).body.setSpeed(analog1.axis.mul(0.1f));
 		analog.initposition = new Vector(240, 700);
-	p.setColor(Color.WHITE);
+		p.setColor(Color.WHITE);
 		canvas.drawLine(0, 200, canvas.getWidth(), 200, p);
 		canvas.drawLine(0, canvas.getHeight()-200, canvas.getWidth(), canvas.getHeight()-200, p);
-      */  invalidate();
+        invalidate();
     }
 }
 	

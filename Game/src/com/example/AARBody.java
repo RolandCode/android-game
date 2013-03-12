@@ -1,6 +1,14 @@
 package com.example;
 
-public class AARBody extends AABB implements Body {
+public class AARBody extends AABB implements Body
+{
+
+	public Vector getAcceleration()
+	{
+		// TODO: Implement this method
+		return acceleration;
+	}
+
 	
 	public enum Side {L, T, R, B};
 	public enum Corner {LB, LT, RB, RT};

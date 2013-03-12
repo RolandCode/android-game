@@ -4,7 +4,15 @@ import com.example.AARBody.Corner;
 
 import android.R.integer;
 
-public class HollowAARBody extends AARBody {
+public class HollowAARBody extends AARBody
+{
+
+	public Vector getAcceleration()
+	{
+		// TODO: Implement this method
+		return acceleration;
+	}
+
 	
 	protected Vector margin;
 	public enum Side {IL, IT, IR, IB, OL, OT, OR, OB};

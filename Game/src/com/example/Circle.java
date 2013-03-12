@@ -10,36 +10,53 @@ public class Circle extends Sprite {
     
     private Paint paint = new Paint();
     public ArrayList<Circle> childrens = new ArrayList<Circle>();
-    public LancioElastico lancio = new LancioElastico(this);
+ 
     public boolean alive = true;
 	protected boolean threadFlag = false;
+	public float r = 50;
+	public LancioElastico lancio = new LancioElastico(this);
+	public int id = 8;
+	int[] T = new int[10];
+	
+	EventsEngine events = new EventsEngine();
+	
 
     public Circle(PhysicsEngine engine) {
         CircleBody body = new CircleBody(engine, this, new Vector(), 50);
         body.radius = 50;
+		r = 50;
         this.body = body;
+		defineTouchEvents();
     }
     public Circle(PhysicsEngine engine,  float radius) {
         CircleBody body = new CircleBody(engine, this, new Vector(), radius);
         body.radius = radius;
+		r = radius;
         this.body = body;
+		defineTouchEvents();
     }
 
     public Circle(PhysicsEngine engine,  float radius, int color) {
         CircleBody body = new CircleBody(engine, this, new Vector(), radius); 
         body.radius = radius;
         this.color = color;
+		defineTouchEvents();
+		r = radius;
     }
 
     public Circle(PhysicsEngine engine, Vector center,  float radius, int color) {
         CircleBody body = new CircleBody(engine, this, center, radius); 
         body.radius = radius;
         this.color = color;
+		defineTouchEvents();
+		r = radius;
     }
 
     public Circle(PhysicsEngine engine, Vector center,  float radius) {
         CircleBody body = new CircleBody(engine, this, center, radius); 
         body.radius = radius;
+		defineTouchEvents();
+		r = radius;
     }
 
     public Circle(PhysicsEngine engine, Vector center, float radius, int color, Vector speed) {
@@ -47,13 +64,41 @@ public class Circle extends Sprite {
         body.radius = radius;
         body.speed = speed;
         this.color = color;
-        this.originalColor = color;
+        originalColor = color;
+		defineTouchEvents();
+		r = radius;
     }
+	
+	void defineTouchEvents(){
+		events.setFingersActions(new EventsEngine.FingersAct(){
+				public void onActUp(int id){ actUp(id);	}
+				public void onActDown(int index){ actDown(index); }	
+			});
+			
+	//	for (int i = 0
+	}
+	
+	void actUp(int id){
+		if(id == this.id){
+			if(lancio.isCharging()) lancio.sayRelased();
+		}
+	}
 
-    @Override
-    public void draw(Canvas canvas){
-        this.drawThis(canvas, body.getCenter());
-        this.drawLancio(canvas);
+	void actDown(int index){
+		if(isTouched(events.x[index], events.y[index])){
+			id = index;
+			lancio.sayPressed();
+		}
+	}
+
+    public void draw(Canvas canvas, MotionEvent e){
+		lancio.draw(canvas);
+        drawThis(canvas, body.getCenter());
+		events.turnON(e);
+		if(launching){		
+			lancio.sayCharging(events.x[id], events.y[id]);
+			if(!events.aliveID(id))lancio.sayRelased();
+		}
     }
     
     @Override
@@ -63,17 +108,31 @@ public class Circle extends Sprite {
 
     protected void drawThis(Canvas canvas, Vector position) {
     	CircleBody circleBody = (CircleBody) body;
-        paint.setColor(Color.WHITE);
+//		(new Vector(body.getAcceleration().getModule()*1000000, (float)Math.toDegrees(body.getAcceleration().getArg()), true)).draw(canvas, getCenter(), Color.argb(100, 255, 255, 255));
+	//	(new Vector(body.getAcceleration().getModule()*(-1000000), (float)Math.toDegrees(body.getAcceleration().getArg()), true)).draw(canvas, getCenter(), Color.argb(100, 255, 255, 255));
+		paint.setColor(Color.argb(90, 0, 255, 0));
+/*		canvas.drawLine(0, getCenter().y, 1000, getCenter().y, paint);
+		canvas.drawLine(getCenter().x, 0, getCenter().x, 1000, paint);
+		canvas.drawLine(getCenter().x, getCenter().y, 0, 0, paint);
+		canvas.drawLine(getCenter().x, getCenter().y, 0, 800, paint);
+		canvas.drawLine(getCenter().x, getCenter().y, 480, 800, paint);
+		canvas.drawLine(getCenter().x, getCenter().y, 480, 0, paint);
+*/		paint.setColor(Color.WHITE);
         canvas.drawCircle(position.x, position.y, circleBody.radius, paint);
         paint.setColor(this.color);
         canvas.drawCircle(position.x, position.y, circleBody.radius-1.5f, paint);
+		paint.setColor(Color.GREEN);
+		paint.setTextSize((int)(r*0.4));
+		paint.setTextAlign(Paint.Align.CENTER);
+	//	body.getSpeed().draw(canvas, new Vector(getCenter().getModule(), (float)Math.toDegrees(getCenter().getArg()), true), Color.argb(150, 0, 0, 255));
+
+//		(new Vector(body.getAcceleration().getModule()*100, (float)Math.toDegrees(body.getAcceleration().getArg()), true)).draw(canvas,  new Vector(getCenter().getModule(), (float)Math.toDegrees(getCenter().getArg()), true), Color.argb(150, 255, 0, 0));
+		
+	//	canvas.drawText("("+(int)getCenter().x+", "+(int)getCenter().y+")", position.x, position.y, paint);
     }
 
     private void drawLancio(Canvas canvas){
-        if(this.lancio.isCharging()){
-            this.lancio.carica.mul(1000).draw(canvas, getCenter(), Color.argb(50, 0, 255, 0));
-            this.lancio.carica.draw(canvas, getCenter(), Color.argb(100, 0, 255, 0));
-        }
+
     }
 
     public void createChildrens(int number){

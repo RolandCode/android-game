@@ -11,12 +11,15 @@ public class CircleBody extends AbstractCircle implements Body {
   public Vector acceleration = new Vector();
   public Entity parent;
   protected PhysicsEngine phEngine;
+  
 
  public CircleBody(PhysicsEngine engine, Entity parent, Vector center, float radius) {
    super(center, radius);
    parent.body = this;
    phEngine = engine;
    phEngine.addBody(this);
+   this.parent = parent;
+ 
  }
 
   public AABB getAABB() {
@@ -30,6 +33,7 @@ public class CircleBody extends AbstractCircle implements Body {
 
   public void update(int ms) {
     this.speed = this.speed.add(this.acceleration);
+	 // this.speed = new Vector((float)(this.speed.getModule()*Math.cos(this.speed.x)), (float)(this.speed.getModule()*Math.sin(this.speed.y)));
     this.center = this.center.add(this.speed);
     
     applyFriction(0.07f);
@@ -48,7 +52,7 @@ public class CircleBody extends AbstractCircle implements Body {
   
   public boolean collideImpl(CircleBody oth) {
     if( (this.center.sub(oth.center).sqrMagnitute()) < Math.pow(this.radius + oth.radius, 2) ) {
-      elastic(this, oth);
+      if(!this.parent.launching && !oth.parent.launching)elastic(this, oth);
       return true;
     } else {
       return false;
@@ -169,11 +173,11 @@ public class CircleBody extends AbstractCircle implements Body {
         C1.speed.setArg((float)D1);
         C2.speed.setArg((float)D2);
 
-        if(!C1.locked){
+        if(!C1.locked && !C1.parent.launching){
             C1.center.x = X1 + S1.x/2;
             C1.center.y = Y1 + S1.y/2;
         }
-        if(!C2.locked){
+        if(!C2.locked && !C2.parent.launching){
             C2.center.x = X2 + S2.x/2;
             C2.center.y = Y2 + S2.y/2;
         }
@@ -200,6 +204,10 @@ public Vector getSpeed() {
 	return speed;
 }
 
+	public Vector getAcceleration() {
+		return acceleration;
+	}
+	
 public void setSpeed(Vector speed) {
 	this.speed = speed;
 }
@@ -212,17 +220,17 @@ public void debugDraw() {
 public void wallCollision() {
 	Vector screenSize = Game.getInstance().getScreenSize();
 	if(center.x + radius > screenSize.x) {
-		center.x = screenSize.x - radius;
+		if(!parent.launching)center.x = screenSize.x - radius;
 		speed.x = -speed.x;
 	} else if(center.x - radius < 0) {
-		center.x = radius;
+		if(!parent.launching)center.x = radius;
 		speed.x = -speed.x;
 	}
 	if(center.y + radius > screenSize.y) {
-		center.y = screenSize.y - radius;
+		if(!parent.launching)center.y = screenSize.y - radius;
 		speed.y = -speed.y;
 	} else if(center.y- radius < 0) {
-		center.y = radius;
+		if(!parent.launching)center.y = radius;
 		speed.y = -speed.y;
 	}
 }

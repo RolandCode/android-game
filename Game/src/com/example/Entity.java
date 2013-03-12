@@ -2,7 +2,7 @@ package com.example;
 
 public class Entity implements EntityInterface {
 	protected Body body;
-
+	public boolean launching = false;
 	public Vector getCenter() {
 		if(body != null)
 			return body.getCenter();

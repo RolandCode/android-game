@@ -2,18 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc0bc62f-4403-46d8-abea-926923c9d11e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/enter.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk.res" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk.res" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk.unaligned" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk.unaligned" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Game.apk" afterPath="$PROJECT_DIR$/out/production/Game/Game.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/classes.dex" afterPath="$PROJECT_DIR$/out/production/Game/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R$layout.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R$string.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/com/example/R.class" afterPath="$PROJECT_DIR$/out/production/Game/com/example/R.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/AnalogControlledView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/AnalogStick.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/Button.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/EventsEngine.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/SwitchButton.java" />
+      <change type="DELETED" beforePath="C:\git-root\android-game\Game\res\raw\enter.wav" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.iml" afterPath="$PROJECT_DIR$/Game.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant.properties" afterPath="$PROJECT_DIR$/ant.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/example/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/R.java" afterPath="$PROJECT_DIR$/gen/com/example/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proguard.cfg" afterPath="$PROJECT_DIR$/proguard.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/options_menu.xml" afterPath="$PROJECT_DIR$/res/menu/options_menu.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/click.wav" afterPath="$PROJECT_DIR$/res/raw/click.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/AABB.java" afterPath="$PROJECT_DIR$/src/com/example/AABB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/AARBody.java" afterPath="$PROJECT_DIR$/src/com/example/AARBody.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/AbstractCircle.java" afterPath="$PROJECT_DIR$/src/com/example/AbstractCircle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Body.java" afterPath="$PROJECT_DIR$/src/com/example/Body.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Circle.java" afterPath="$PROJECT_DIR$/src/com/example/Circle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/CircleBody.java" afterPath="$PROJECT_DIR$/src/com/example/CircleBody.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/CircleButton.java" afterPath="$PROJECT_DIR$/src/com/example/CircleButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/CollisionInfo.java" afterPath="$PROJECT_DIR$/src/com/example/CollisionInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Debug.java" afterPath="$PROJECT_DIR$/src/com/example/Debug.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Elastic.java" afterPath="$PROJECT_DIR$/src/com/example/Elastic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Entity.java" afterPath="$PROJECT_DIR$/src/com/example/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/EntityInterface.java" afterPath="$PROJECT_DIR$/src/com/example/EntityInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Game.java" afterPath="$PROJECT_DIR$/src/com/example/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/GameActivity.java" afterPath="$PROJECT_DIR$/src/com/example/GameActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/GravityBall.java" afterPath="$PROJECT_DIR$/src/com/example/GravityBall.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/HollowAARBody.java" afterPath="$PROJECT_DIR$/src/com/example/HollowAARBody.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/LancioElastico.java" afterPath="$PROJECT_DIR$/src/com/example/LancioElastico.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/MainMenu.java" afterPath="$PROJECT_DIR$/src/com/example/MainMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/PhysicsEngine.java" afterPath="$PROJECT_DIR$/src/com/example/PhysicsEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sound.java" afterPath="$PROJECT_DIR$/src/com/example/Sound.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/SoundExample.java" afterPath="$PROJECT_DIR$/src/com/example/SoundExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sprite.java" afterPath="$PROJECT_DIR$/src/com/example/Sprite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/TexturedCircle.java" afterPath="$PROJECT_DIR$/src/com/example/TexturedCircle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/UtilCollisioni.java" afterPath="$PROJECT_DIR$/src/com/example/UtilCollisioni.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Utility.java" afterPath="$PROJECT_DIR$/src/com/example/Utility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Vector.java" afterPath="$PROJECT_DIR$/src/com/example/Vector.java" />
     </list>
     <ignored path="ImpossibleLike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,14 +114,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SoundExample.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/SoundExample.java">
+      <file leaf-file-name="AnalogStick.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AnalogStick.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="64" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
+            <state line="89" column="108" selection-start="2524" selection-end="2524" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#941#1086#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Button.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/Button.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="4" selection-start="1878" selection-end="1878" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventsEngine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/EventsEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="102" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SwitchButton.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/SwitchButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnalogControlledView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/AnalogControlledView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="14" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Circle.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/Circle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="100" column="61" selection-start="2756" selection-end="2756" vertical-scroll-proportion="0.6912929">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,10 +188,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainMenu.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="130" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.35079366">
+            <state line="80" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,10 +200,8 @@
       <file leaf-file-name="CircleButton.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/CircleButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="27" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="method#drawThis#0;class#CircleButton#0" expanded="false" />
-              </folding>
+            <state line="85" column="34" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,17 +217,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="Physics" />
+        <entry key="$PROJECT_DIR$/.." value="Sounds" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/TexturedObject.java" />
-        <option value="$PROJECT_DIR$/src/com/example/CircleBody.java" />
-        <option value="$PROJECT_DIR$/src/com/example/HollowAARBody.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Drawer.java" />
         <option value="$PROJECT_DIR$/src/com/example/ElasticTextured.java" />
         <option value="$PROJECT_DIR$/src/com/example/TexturedCircle.java" />
         <option value="$PROJECT_DIR$/src/com/example/GravityBall.java" />
@@ -151,10 +232,14 @@
         <option value="$PROJECT_DIR$/src/com/example/Vector.java" />
         <option value="$PROJECT_DIR$/src/com/example/GameActivity.java" />
         <option value="$PROJECT_DIR$/gen/com/example/R.java" />
+        <option value="$PROJECT_DIR$/src/com/example/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/com/example/Sound.java" />
         <option value="$PROJECT_DIR$/src/com/example/CircleButton.java" />
         <option value="$PROJECT_DIR$/src/com/example/SoundExample.java" />
-        <option value="$PROJECT_DIR$/src/com/example/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/com/example/AnalogStick.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Button.java" />
+        <option value="$PROJECT_DIR$/src/com/example/SwitchButton.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Circle.java" />
       </list>
     </option>
   </component>
@@ -190,6 +275,30 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImpossibleLike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -314,30 +423,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ImpossibleLike" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,7 +431,7 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -354,8 +439,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -417,6 +502,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -442,24 +545,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -679,36 +764,32 @@
       <created>1360074611208</created>
       <updated>1360074611208</updated>
     </task>
-    <task id="LOCAL-00025" summary="New class Sound and SoundExample; button's feedback sound.">
-      <created>1360074762251</created>
-      <updated>1360074762251</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49430525" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.49734244" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39965695" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724506" sideWeight="0.49734244" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49734244" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.48823082" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.48823082" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49734244" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1522694" sideWeight="0.67275494" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329429" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.14916286" sideWeight="0.476082" order="2" side_tool="false" content_ui="tabs" x="-970" y="305" width="1317" height="151" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.49734244" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -751,7 +832,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="New class Sound and SoundExample; button's feedback sound." />
+    <option name="LAST_COMMIT_MESSAGE" value="Multitouched! class EventsEngine + AnalogStick + Pulsanti + Interruttori..." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -778,6 +859,7 @@
     <MESSAGE value="Options Menu" />
     <MESSAGE value="Gravity Ball" />
     <MESSAGE value="New class Sound and SoundExample; button's feedback sound." />
+    <MESSAGE value="Multitouched! class EventsEngine + AnalogStick + Pulsanti + Interruttori..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -787,26 +869,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/example/CircleBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/GravityBall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1546" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Android SDK/android-sdk/platforms/android-8/android.jar!/android/media/SoundPool.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/EntityInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="13" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" />
@@ -817,42 +879,31 @@
         <state line="13" column="0" selection-start="267" selection-end="319" vertical-scroll-proportion="-0.51111114" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/raw/explosion.wav">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gen/com/example/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="801" selection-end="801" vertical-scroll-proportion="0.5952381">
-          <folding>
-            <element signature="e#0#1098#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="26" column="35" selection-start="801" selection-end="801" vertical-scroll-proportion="0.5952381" />
       </provider>
     </entry>
-    <entry file="jar://C:/Android SDK/android-sdk/platforms/android-8/android.jar!/android/media/MediaPlayer.class">
+    <entry file="file://$PROJECT_DIR$/res/raw/click.wav">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="16" selection-start="2975" selection-end="2975" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Sound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="19" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/raw/enter.wav">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/SoundExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="64" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#941#1086#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-          </folding>
+        <state line="24" column="58" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="19" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/GameActivity.java">
@@ -860,32 +911,56 @@
         <state line="22" column="63" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/raw/explosion.wav">
+    <entry file="file://$PROJECT_DIR$/src/com/example/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="80" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/CircleButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="27" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="method#drawThis#0;class#CircleButton#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="85" column="34" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/raw/click.wav">
+    <entry file="file://$PROJECT_DIR$/src/com/example/SwitchButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/AnalogStick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="130" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.35079366">
+        <state line="89" column="108" selection-start="2524" selection-end="2524" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="4" selection-start="1878" selection-end="1878" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/EventsEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="102" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/AnalogControlledView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="14" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="61" selection-start="2756" selection-end="2756" vertical-scroll-proportion="0.6912929">
           <folding />
         </state>
       </provider>

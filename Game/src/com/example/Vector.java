@@ -125,6 +125,10 @@ public final class Vector {
     public String toString() {
         return "(" + x + "," + y + ")";
     }
+	
+	public Vector clone(){
+		return new Vector(x, y);
+	}
 
     public void draw(Canvas canvas, Vector pos, int c){
         this.paint.setColor(c);

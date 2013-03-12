@@ -16,6 +16,9 @@ public interface Body {
   public Vector getLocalCenter();
   
   public Vector getSpeed();
+  
+  public Vector getAcceleration();
+	
   public void setSpeed(Vector speed);
   
   public void update(int ms);

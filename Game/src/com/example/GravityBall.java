@@ -20,7 +20,7 @@ public class GravityBall extends View {
     Resources risorse = getResources();
     TexturedCircle ball;
     Bitmap background;
-
+	
     Paint paint = new Paint();
 
     public GravityBall(Context context){ super(context); }
@@ -29,14 +29,15 @@ public class GravityBall extends View {
         if(flagInit){
             phEngine = new PhysicsEngine();
             ball = new TexturedCircle(phEngine, 60, R.drawable.ball, this.risorse);
-            ball.body.setCenter(new Vector(240, 400));
+           // ball.body.setCenter(new Vector(240, 400));
+			
             background = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(risorse, R.drawable.sfondo), getWidth(), getHeight(), true);
         } flagInit = false;
     }
 
     void updateObjects(){
         phEngine.update(10);
-        ball.body.setSpeed(new Vector(-GameActivity.accelerometerValues[0]*3, GameActivity.accelerometerValues[1]*3));
+     //   ball.body.setSpeed(new Vector(-GameActivity.accelerometerValues[0]*3, GameActivity.accelerometerValues[1]*3));
     }
 
     void drawObjects(Canvas canvas){

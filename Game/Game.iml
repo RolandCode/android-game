@@ -26,7 +26,7 @@
         <resOverlayFolders>
           <path>/res-overlay</path>
         </resOverlayFolders>
-        <includeSystemProguardFile>true</includeSystemProguardFile>
+        <includeSystemProguardFile>false</includeSystemProguardFile>
       </configuration>
     </facet>
   </component>
